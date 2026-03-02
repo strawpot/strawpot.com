@@ -319,6 +319,8 @@ import Layout from '../layouts/Layout.astro';
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <nav class="footer-links">
+      <a href="https://discord.gg/buEbvEMC" target="_blank" rel="noopener">Discord</a>
+      <span class="footer-sep" aria-hidden="true">&middot;</span>
       <a href="https://github.com/strawpot/strawpot" target="_blank" rel="noopener">GitHub</a>
       <span class="footer-sep" aria-hidden="true">&middot;</span>
       <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a>
@@ -428,12 +430,13 @@ import Layout from '../layouts/Layout.astro';
   .hero-install {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
     background: var(--color-bg-elevated);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 0.6rem 0.75rem 0.6rem 1.25rem;
     margin-bottom: 2rem;
+    max-width: 100%;
     animation: fadeInUp 0.6s ease-out 0.35s both;
   }
 
@@ -449,8 +452,10 @@ import Layout from '../layouts/Layout.astro';
     user-select: none;
   }
 
-  .hero-copy {
+  .hero-install .copy-btn {
     position: static;
+    top: auto;
+    right: auto;
     flex-shrink: 0;
   }
 

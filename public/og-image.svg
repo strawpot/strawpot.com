@@ -13,6 +13,7 @@
     </linearGradient>
   </defs>
   <text x="600" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="72" fill="url(#gold)">StrawPot</text>
-  <text x="600" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="28" fill="#8888a0">Lightweight CLI for Agent Orchestration</text>
-  <text x="600" y="420" text-anchor="middle" font-family="monospace" font-size="22" fill="#4ade80">$ pip install strawpot</text>
+  <text x="600" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="28" fill="#e8e8ed">AI teams, one command away.</text>
+  <text x="600" y="400" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="20" fill="#8888a0">Open-source CLI for AI agent orchestration</text>
+  <text x="600" y="460" text-anchor="middle" font-family="monospace" font-size="22" fill="#4ade80">$ pip install strawpot</text>
 </svg>
