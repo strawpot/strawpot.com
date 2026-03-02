@@ -1,0 +1,1236 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">Open Source &middot; v0.1 Early Preview</span>
+      <h1 class="hero-title">
+        AI teams,<br />one command away.
+      </h1>
+      <p class="hero-subtitle">
+        An open-source CLI that spins up AI agent teams&mdash;they split work,
+        share context, and merge results, each in its own isolated workspace.
+        Run one team or many across projects with Claude&nbsp;Code, Codex,
+        OpenHands, and reusable components from
+        <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a>.
+      </p>
+      <div class="hero-install">
+        <code class="hero-cmd">
+          <span class="p">$</span> pip install strawpot
+        </code>
+        <button
+          class="copy-btn hero-copy"
+          data-copy="pip install strawpot"
+          aria-label="Copy install command"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+      </div>
+      <div class="hero-actions">
+        <a href="#quickstart" class="btn btn-primary">Get Started</a>
+        <a
+          href="https://github.com/strawpot/strawpot"
+          class="btn btn-ghost"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Star on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK START ===== -->
+  <section id="quickstart" class="quickstart">
+    <h2 class="section-title">Quick Start</h2>
+    <div class="code-window">
+      <div class="code-tabs">
+        <div class="window-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <button class="code-tab active" data-mode="install">Install</button>
+        <button class="code-tab" data-mode="source">From Source</button>
+      </div>
+
+      <div class="code-block" data-mode="install">
+        <button
+          class="copy-btn"
+          data-copy="pip install strawpot"
+          aria-label="Copy install command"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+        <pre><code><span class="c"># Install StrawPot</span>
+<span class="p">$</span> pip install strawpot
+
+<span class="c"># Start a session</span>
+<span class="p">$</span> strawpot start <span class="f">--role</span> team-lead</code></pre>
+      </div>
+
+      <div class="code-block hidden" data-mode="source">
+        <button
+          class="copy-btn"
+          data-copy="git clone https://github.com/strawpot/strawpot && cd strawpot/cli && pip install -e '.[dev]'"
+          aria-label="Copy source install commands"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+        <pre><code><span class="c"># Clone and install from source</span>
+<span class="p">$</span> git clone https://github.com/strawpot/strawpot
+<span class="p">$</span> <span class="f">cd</span> strawpot/cli
+<span class="p">$</span> pip install <span class="f">-e</span> <span class="s">".[dev]"</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features">
+    <h2 class="section-title">What It Does</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3>Isolated Sessions</h3>
+        <p>
+          Each session runs in its own sandbox&mdash;git worktree, Docker, or
+          a custom environment. Agents work freely without touching your
+          main workspace until you&rsquo;re ready to merge results.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="5" r="3"></circle>
+            <circle cx="5" cy="19" r="3"></circle>
+            <circle cx="19" cy="19" r="3"></circle>
+            <line x1="12" y1="8" x2="5" y2="16"></line>
+            <line x1="12" y1="8" x2="19" y2="16"></line>
+          </svg>
+        </div>
+        <h3>Multi-Agent Delegation</h3>
+        <p>
+          A lead agent breaks work into tasks, then StrawPot spawns
+          specialists&mdash;researchers, writers, coders, reviewers&mdash;all
+          coordinated automatically across any workflow.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+        </div>
+        <h3>Any Agent Runtime</h3>
+        <p>
+          Use Claude Code for coding, Codex for research, OpenHands for
+          ops&mdash;or plug in your own runtime. Mix and match per role.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="architecture">
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="arch-overview">
+      <a href="https://strawhub.dev" target="_blank" rel="noopener" class="arch-node arch-link">
+        <div class="arch-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+        </div>
+        <h3>StrawHub <span class="external-arrow">&nearr;</span></h3>
+        <span>Skills, roles, agents &amp; memory</span>
+      </a>
+
+      <div class="arch-connector" aria-hidden="true">
+        <div class="connector-line"></div>
+        <div class="connector-branches">
+          <div class="connector-branch"></div>
+          <div class="connector-branch"></div>
+          <div class="connector-branch"></div>
+        </div>
+      </div>
+
+      <div class="arch-sessions">
+        <div class="session-card">
+          <div class="session-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span class="session-label">strawpot start</span>
+          </div>
+          <h3>Engineering</h3>
+          <div class="session-agents">
+            <span class="agent-tag">Lead</span>
+            <span class="agent-tag">Coder</span>
+            <span class="agent-tag">Tester</span>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span class="session-label">strawpot start</span>
+          </div>
+          <h3>Research</h3>
+          <div class="session-agents">
+            <span class="agent-tag">Analyst</span>
+            <span class="agent-tag">Writer</span>
+            <span class="agent-tag">Reviewer</span>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span class="session-label">strawpot start</span>
+          </div>
+          <h3>Marketing</h3>
+          <div class="session-agents">
+            <span class="agent-tag">Strategist</span>
+            <span class="agent-tag">Copywriter</span>
+            <span class="agent-tag">Designer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arch-steps">
+      <ol>
+        <li>Pull roles and skills from <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a> &mdash; or define your own</li>
+        <li>Run <code>strawpot start</code> &mdash; each session gets an isolated workspace</li>
+        <li>Agents delegate sub-tasks &mdash; StrawPot resolves roles and spawns sub-agents</li>
+        <li>On exit, cleans up everything automatically</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== STRAWHUB ===== -->
+  <section class="strawhub">
+    <div class="strawhub-inner">
+      <div class="strawhub-text">
+        <h2 class="section-title" style="text-align:left">
+          Browse skills, roles, agents &amp; more on
+          <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a>
+        </h2>
+        <p class="strawhub-desc">
+          StrawHub is the public registry for reusable agent components&mdash;skills,
+          roles, agent configs, and memory providers. Discover what the community
+          has built, publish your own, and install straight from the CLI.
+        </p>
+        <div class="strawhub-commands">
+          <code><span class="p">$</span> strawpot search <span class="s">"code-review"</span></code>
+          <code><span class="p">$</span> strawpot install <span class="s">code-review</span></code>
+        </div>
+        <a
+          href="https://strawhub.dev"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Explore StrawHub &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUBSCRIBE ===== -->
+  <section class="subscribe">
+    <h2 class="section-title">Stay in the loop</h2>
+    <p class="subscribe-desc">
+      Get updates on new releases, features, and community highlights. No spam.
+    </p>
+    <form
+      class="subscribe-form"
+      id="subscribe-form"
+      action="https://buttondown.com/api/emails/embed-subscribe/strawpot"
+      method="post"
+      target="bd-iframe"
+    >
+      <input
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        aria-label="Email address"
+      />
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <iframe name="bd-iframe" id="bd-iframe" style="display:none" aria-hidden="true"></iframe>
+    <p class="subscribe-msg" id="subscribe-msg"></p>
+    <p class="subscribe-note">
+      Powered by <a href="https://buttondown.com" target="_blank" rel="noopener">Buttondown</a>
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <nav class="footer-links">
+      <a href="https://github.com/strawpot/strawpot" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-sep" aria-hidden="true">&middot;</span>
+      <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a>
+      <span class="footer-sep" aria-hidden="true">&middot;</span>
+      <a href="https://pypi.org/project/strawpot/" target="_blank" rel="noopener">PyPI</a>
+      <span class="footer-sep" aria-hidden="true">&middot;</span>
+      <a href="https://github.com/strawpot/strawpot/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+    </nav>
+    <p class="footer-credit">Built by the StrawPot contributors.</p>
+  </footer>
+</Layout>
+
+<style>
+  /* ===== HERO ===== */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(232, 185, 49, 0.12) 0%,
+      rgba(232, 185, 49, 0.04) 40%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-border) 50%,
+      transparent 100%
+    );
+  }
+
+  .hero-inner {
+    max-width: var(--max-width);
+    position: relative;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.6s ease-out 0s both;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color-straw-light) 0%, var(--color-straw) 50%, var(--color-straw-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--color-text-muted);
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    animation: fadeInUp 0.6s ease-out 0.25s both;
+  }
+
+  .hero-install {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.75rem 0.6rem 1.25rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.6s ease-out 0.35s both;
+  }
+
+  .hero-cmd {
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    color: var(--color-text);
+    white-space: nowrap;
+  }
+
+  .hero-cmd .p {
+    color: var(--color-green);
+    user-select: none;
+  }
+
+  .hero-copy {
+    position: static;
+    flex-shrink: 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+  }
+
+  /* ===== BUTTONS ===== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--color-straw);
+    color: var(--color-bg-deep);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-straw-light);
+    color: var(--color-bg-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(232, 185, 49, 0.3);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+    transform: translateY(-1px);
+  }
+
+  /* ===== SECTION COMMON ===== */
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--color-text);
+  }
+
+  /* ===== QUICK START ===== */
+  .quickstart {
+    padding: var(--section-padding);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .code-window {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .code-tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-surface);
+  }
+
+  .window-dots {
+    display: flex;
+    gap: 6px;
+    padding: 0 1rem;
+  }
+
+  .window-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-border);
+  }
+
+  .window-dots span:first-child {
+    background: #ff5f57;
+  }
+
+  .window-dots span:nth-child(2) {
+    background: #febc2e;
+  }
+
+  .window-dots span:nth-child(3) {
+    background: #28c840;
+  }
+
+  .code-tab {
+    padding: 0.7rem 1.25rem;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  .code-tab:hover {
+    color: var(--color-text);
+  }
+
+  .code-tab.active {
+    color: var(--color-straw);
+  }
+
+  .code-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--color-straw);
+  }
+
+  .code-block {
+    position: relative;
+    padding: 1.5rem;
+  }
+
+  .code-block.hidden {
+    display: none;
+  }
+
+  .code-block pre {
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .code-block code {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--color-text);
+  }
+
+  .code-block .c {
+    color: var(--color-text-muted);
+  }
+
+  .code-block .p {
+    color: var(--color-green);
+    user-select: none;
+  }
+
+  .code-block .f {
+    color: var(--color-straw);
+  }
+
+  .code-block .s {
+    color: var(--color-green);
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 0.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .copy-btn:hover {
+    color: var(--color-text);
+    border-color: var(--color-text-muted);
+  }
+
+  .copy-btn .check-icon {
+    display: none;
+  }
+
+  .copy-btn.copied .check-icon {
+    display: block;
+    color: var(--color-green);
+  }
+
+  .copy-btn.copied svg:first-child {
+    display: none;
+  }
+
+  /* ===== FEATURES ===== */
+  .features {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .feature-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: all 0.25s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232, 185, 49, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature-icon {
+    color: var(--color-straw);
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+
+  .feature-card p {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* ===== ARCHITECTURE ===== */
+  .architecture {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .architecture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(232, 185, 49, 0.05) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .arch-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 3rem;
+  }
+
+  .arch-node {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 160px;
+    transition: all 0.25s;
+  }
+
+  .arch-node:hover {
+    border-color: rgba(232, 185, 49, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .arch-icon {
+    color: var(--color-straw);
+    margin-bottom: 0.75rem;
+  }
+
+  .arch-node h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+  }
+
+  .arch-node span {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Connector: vertical line from StrawHub, then branches to sessions */
+  .arch-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .connector-line {
+    width: 1px;
+    height: 2rem;
+    background: var(--color-border);
+  }
+
+  .connector-branches {
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    position: relative;
+  }
+
+  .connector-branches::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(100% / 6);
+    right: calc(100% / 6);
+    height: 1px;
+    background: var(--color-border);
+  }
+
+  .connector-branch {
+    flex: 1;
+    position: relative;
+  }
+
+  .connector-branch::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: var(--color-border);
+  }
+
+  /* Session cards */
+  .arch-sessions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .session-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+    transition: all 0.25s;
+  }
+
+  .session-card:hover {
+    border-color: rgba(232, 185, 49, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .session-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-straw);
+  }
+
+  .session-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+  }
+
+  .session-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .session-agents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: center;
+  }
+
+  .agent-tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    color: var(--color-text-muted);
+  }
+
+  .arch-steps {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .arch-steps ol {
+    list-style: none;
+    counter-reset: steps;
+    padding-left: 0;
+  }
+
+  .arch-steps li {
+    counter-increment: steps;
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 1.25rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-left: 1px solid var(--color-border);
+    margin-left: 0.85rem;
+  }
+
+  .arch-steps li:last-child {
+    padding-bottom: 0;
+    border-left: 1px solid transparent;
+  }
+
+  .arch-steps li::before {
+    content: counter(steps);
+    position: absolute;
+    left: -0.85rem;
+    top: 0;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-straw);
+  }
+
+  /* ===== STRAWHUB ===== */
+  .strawhub {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .strawhub-inner {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .strawhub-inner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(232, 185, 49, 0.06) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .strawhub-desc {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 540px;
+    margin-bottom: 1.5rem;
+  }
+
+  .strawhub-commands {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .strawhub-commands code {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+  }
+
+  .strawhub-commands .p {
+    color: var(--color-green);
+    user-select: none;
+  }
+
+  .strawhub-commands .s {
+    color: var(--color-straw);
+  }
+
+  .external-arrow {
+    font-size: 0.85em;
+    color: var(--color-text-muted);
+    transition: color 0.2s;
+  }
+
+  .arch-link {
+    color: var(--color-text);
+    text-decoration: none;
+    display: block;
+  }
+
+  .arch-link:hover {
+    color: var(--color-text);
+  }
+
+  .arch-link:hover .external-arrow {
+    color: var(--color-straw);
+  }
+
+  /* ===== SECTION DIVIDERS ===== */
+  .quickstart,
+  .features,
+  .strawhub {
+    position: relative;
+  }
+
+  .features::after,
+  .strawhub::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-border) 50%,
+      transparent 100%
+    );
+  }
+
+  /* ===== SUBSCRIBE ===== */
+  .subscribe {
+    padding: 5rem 1.5rem;
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .subscribe-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 440px;
+    margin: 0 auto 1rem;
+  }
+
+  .subscribe-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .subscribe-form input::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .subscribe-form input:focus {
+    border-color: var(--color-straw);
+  }
+
+  .subscribe-form .btn {
+    flex-shrink: 0;
+  }
+
+  .subscribe-msg {
+    font-size: 0.88rem;
+    margin-bottom: 0.5rem;
+    min-height: 1.4em;
+  }
+
+  .subscribe-msg.success {
+    color: var(--color-green);
+  }
+
+  .subscribe-msg.error {
+    color: #f87171;
+  }
+
+  .subscribe-note {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    opacity: 0.6;
+  }
+
+  .subscribe-note a {
+    color: var(--color-text-muted);
+  }
+
+  .subscribe-note a:hover {
+    color: var(--color-straw);
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    margin-top: 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-straw);
+  }
+
+  .footer-sep {
+    color: var(--color-border);
+  }
+
+  .footer-credit {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+    }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding: 6rem 1.5rem 4rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .arch-sessions {
+      grid-template-columns: 1fr;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    .connector-branches::before {
+      left: 50%;
+      right: 50%;
+      width: 1px;
+      height: 0;
+    }
+
+    .connector-branches {
+      display: none;
+    }
+
+    .connector-line {
+      height: 1.5rem;
+    }
+
+    .subscribe-form {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  // Copy to clipboard
+  document.querySelectorAll('.copy-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = (btn as HTMLElement).dataset.copy;
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      btn.classList.add('copied');
+      setTimeout(() => btn.classList.remove('copied'), 2000);
+    });
+  });
+
+  // Tab switching
+  document.querySelectorAll('.code-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const mode = (tab as HTMLElement).dataset.mode;
+      document.querySelectorAll('.code-tab').forEach((t) => t.classList.remove('active'));
+      document.querySelectorAll('.code-block').forEach((b) => b.classList.add('hidden'));
+      tab.classList.add('active');
+      document.querySelector(`.code-block[data-mode="${mode}"]`)?.classList.remove('hidden');
+    });
+  });
+
+  // Subscribe form (submits to hidden iframe to avoid CORS)
+  const form = document.getElementById('subscribe-form') as HTMLFormElement;
+  const msg = document.getElementById('subscribe-msg')!;
+  const iframe = document.getElementById('bd-iframe') as HTMLIFrameElement;
+
+  form?.addEventListener('submit', () => {
+    const btn = form.querySelector('button')!;
+    btn.disabled = true;
+    btn.textContent = 'Subscribing...';
+    msg.textContent = '';
+    msg.className = 'subscribe-msg';
+  });
+
+  iframe?.addEventListener('load', () => {
+    const btn = form?.querySelector('button');
+    if (!btn || !btn.disabled) return;
+    msg.textContent = 'You\u2019re subscribed! Check your inbox to confirm.';
+    msg.className = 'subscribe-msg success';
+    form.reset();
+    btn.disabled = false;
+    btn.textContent = 'Subscribe';
+  });
+</script>
