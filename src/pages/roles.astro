@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Roles — StrawPot" description="Browse agent roles for StrawPot. Roles are structured job descriptions that bundle skills, behavior, and constraints.">
+  <section class="roles-page">
+    <div class="roles-page-inner">
+      <h1>Roles</h1>
+      <p>The full role directory is coming soon. In the meantime, browse roles on StrawHub.</p>
+      <a href="https://strawhub.dev" class="btn btn-primary" target="_blank" rel="noopener">Browse on StrawHub &rarr;</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .roles-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+
+  .roles-page-inner {
+    max-width: 480px;
+  }
+
+  .roles-page h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .roles-page p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--color-straw);
+    color: var(--color-bg-deep);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-straw-light);
+    color: var(--color-bg-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(232, 185, 49, 0.3);
+  }
+</style>
