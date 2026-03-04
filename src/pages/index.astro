@@ -24,8 +24,8 @@ import Layout from '../layouts/Layout.astro';
       <h1 class="hero-title">StrawPot</h1>
       <p class="hero-tagline">Run role-based AI workers locally.</p>
       <p class="hero-subtitle">
-        Install roles such as Team&nbsp;Lead, Implementer, or Reviewer.
-        StrawPot automatically resolves the skills and launches the team.
+        Install roles like team-lead, implementer, or analyst.
+        StrawPot automatically loads the skills required to perform the job.
       </p>
       <div class="hero-install">
         <code class="hero-cmd">
@@ -78,6 +78,44 @@ import Layout from '../layouts/Layout.astro';
           <span class="hero-link-sub">Browse roles & skills</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== THE WORKFORCE MODEL ===== -->
+  <section id="workforce" class="workforce-model">
+    <h2 class="section-title">The Workforce Model</h2>
+    <p class="section-subtitle">Skills are abilities. Roles are jobs. Teams are roles collaborating.</p>
+    <div class="workforce-grid">
+      <div class="workforce-card">
+        <h3>Skills</h3>
+        <p class="workforce-def">Atomic capabilities such as writing code, searching documents, or running tests.</p>
+      </div>
+      <div class="workforce-card workforce-card--role">
+        <h3>Roles</h3>
+        <p class="workforce-def">Job definitions that automatically load the skills needed for the work.</p>
+      </div>
+      <div class="workforce-card workforce-card--team">
+        <h3>Teams</h3>
+        <p class="workforce-def">Roles collaborating to complete tasks.</p>
+      </div>
+    </div>
+    <div class="role-tree">
+      <div class="resolution-window">
+        <div class="code-tabs">
+          <div class="window-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="resolution-tab">strawpot resolve role implementer</span>
+        </div>
+        <div class="resolution-content">
+          <pre class="tree-output"><code><span class="f">Role: implementer</span>
+ ├─ <span class="s">git-workflow</span>
+ ├─ <span class="s">python-dev</span>
+ ├─ <span class="s">run-tests</span>
+ └─ <span class="s">code-review</span></code></pre>
+        </div>
+      </div>
+      <p class="tree-caption">Install a role. StrawPot resolves the skills automatically.</p>
     </div>
   </section>
 
@@ -161,44 +199,6 @@ strawpot start --role reviewer"
 <span class="p">$</span> <span class="f">cd</span> strawpot/cli
 <span class="p">$</span> pip install <span class="f">-e</span> <span class="s">".[dev]"</span></code></pre>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== THE WORKFORCE MODEL ===== -->
-  <section id="workforce" class="workforce-model">
-    <h2 class="section-title">The Workforce Model</h2>
-    <p class="section-subtitle">Skills are abilities. Roles are jobs. Teams are roles collaborating.</p>
-    <div class="workforce-grid">
-      <div class="workforce-card">
-        <h3>Skills</h3>
-        <p class="workforce-def">Atomic capabilities such as writing code, searching documents, or running tests.</p>
-      </div>
-      <div class="workforce-card workforce-card--role">
-        <h3>Roles</h3>
-        <p class="workforce-def">Job definitions that automatically load the skills needed for the work.</p>
-      </div>
-      <div class="workforce-card workforce-card--team">
-        <h3>Teams</h3>
-        <p class="workforce-def">Roles collaborating to complete tasks.</p>
-      </div>
-    </div>
-    <div class="role-tree">
-      <div class="resolution-window">
-        <div class="code-tabs">
-          <div class="window-dots" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-          <span class="resolution-tab">strawpot resolve role implementer</span>
-        </div>
-        <div class="resolution-content">
-          <pre class="tree-output"><code><span class="f">Role: implementer</span>
- ├─ <span class="s">git-workflow</span>
- ├─ <span class="s">python-dev</span>
- ├─ <span class="s">run-tests</span>
- └─ <span class="s">code-review</span></code></pre>
-        </div>
-      </div>
-      <p class="tree-caption">Install a role. StrawPot resolves the skills automatically.</p>
     </div>
   </section>
 
