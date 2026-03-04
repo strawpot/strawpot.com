@@ -24,8 +24,8 @@ import Layout from '../layouts/Layout.astro';
       <h1 class="hero-title">StrawPot</h1>
       <p class="hero-tagline">Run role-based AI workers locally.</p>
       <p class="hero-subtitle">
-        Install roles like team-lead, implementer, or analyst.
-        StrawPot automatically loads the skills required to perform the job.
+        Install roles like Team&nbsp;Lead, Implementer, or Analyst.
+        StrawPot automatically resolves the skills needed for the job and launches the team.
       </p>
       <div class="hero-install">
         <code class="hero-cmd">
@@ -75,7 +75,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="https://strawhub.dev" class="hero-link hero-link--strawhub" target="_blank" rel="noopener">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           <span class="hero-link-label">StrawHub</span>
-          <span class="hero-link-sub">Browse roles & skills</span>
+          <span class="hero-link-sub">Install a role, get its skills</span>
         </a>
       </div>
     </div>
@@ -223,11 +223,10 @@ strawpot start --role reviewer"
  └─ reviewer</code></pre>
       </div>
       <div class="team-tree-card">
-        <h3>Support</h3>
-        <pre class="tree-output"><code><span class="f">support-lead</span>
- ├─ ticket-analyzer
- ├─ knowledge-search
- └─ response-writer</code></pre>
+        <h3>Product</h3>
+        <pre class="tree-output"><code><span class="f">product-manager</span>
+ ├─ analyst
+ └─ implementer</code></pre>
       </div>
     </div>
     <div class="team-workflow">
@@ -280,7 +279,7 @@ strawpot start --role reviewer"
   <!-- ===== ROLE REGISTRY ===== -->
   <section id="registry" class="role-registry">
     <h2 class="section-title">StrawHub Role Registry</h2>
-    <p class="section-subtitle">StrawHub hosts reusable roles and skills. Installing a role automatically installs the skills required to perform that job.</p>
+    <p class="section-subtitle">StrawHub is the registry of roles for AI workers. Installing a role automatically installs the skills required for that job.</p>
     <div class="registry-grid">
       <div class="role-card">
         <h3>Implementer</h3>
