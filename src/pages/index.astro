@@ -8,12 +8,11 @@ import Layout from '../layouts/Layout.astro';
     <div class="top-nav-inner">
       <a href="/" class="nav-brand">StrawPot</a>
       <div class="nav-links">
-        <a href="#roles" class="nav-link nav-link--primary">Roles</a>
-        <a href="#roles" class="nav-link">Skills</a>
+        <a href="#workforce" class="nav-link nav-link--primary">Roles</a>
+        <a href="#workforce" class="nav-link">Skills</a>
         <a href="https://strawhub.dev" class="nav-link" target="_blank" rel="noopener">StrawHub</a>
         <a href="https://docs.strawpot.com/" class="nav-link" target="_blank" rel="noopener">Docs</a>
         <a href="https://github.com/strawpot/strawpot" class="nav-link" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://discord.gg/buEbvEMC" class="nav-link" target="_blank" rel="noopener">Discord</a>
       </div>
     </div>
   </nav>
@@ -23,11 +22,10 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-inner">
       <span class="hero-badge">Open Source &middot; v0.1 Early Preview</span>
       <h1 class="hero-title">StrawPot</h1>
-      <p class="hero-tagline">Run AI teams from your terminal.</p>
+      <p class="hero-tagline">Run role-based AI workers locally.</p>
       <p class="hero-subtitle">
-        StrawPot launches role-based AI teams that collaborate in isolated sessions.
-        Roles automatically resolve the skills, agents, and memory providers they
-        need from <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a>.
+        Install roles such as Team&nbsp;Lead, Implementer, or Reviewer.
+        StrawPot automatically resolves the skills and launches the team.
       </p>
       <div class="hero-install">
         <code class="hero-cmd">
@@ -166,31 +164,22 @@ strawpot start --role reviewer"
     </div>
   </section>
 
-  <!-- ===== ROLES AND SKILLS ===== -->
-  <section id="roles" class="roles-vs-skills">
-    <h2 class="section-title">Skills give abilities. Roles give jobs.</h2>
-    <div class="comparison-grid">
-      <div class="comparison-card">
+  <!-- ===== THE WORKFORCE MODEL ===== -->
+  <section id="workforce" class="workforce-model">
+    <h2 class="section-title">The Workforce Model</h2>
+    <p class="section-subtitle">Skills are abilities. Roles are jobs. Teams are roles collaborating.</p>
+    <div class="workforce-grid">
+      <div class="workforce-card">
         <h3>Skills</h3>
-        <p class="comparison-def">Atomic capabilities an agent can execute.</p>
-        <ul class="comparison-examples">
-          <li>Search repository</li>
-          <li>Write code</li>
-          <li>Run tests</li>
-          <li>Summarize ticket</li>
-          <li>Draft documentation</li>
-        </ul>
+        <p class="workforce-def">Atomic capabilities such as writing code, searching documents, or running tests.</p>
       </div>
-      <div class="comparison-card comparison-card--role">
+      <div class="workforce-card workforce-card--role">
         <h3>Roles</h3>
-        <p class="comparison-def">Job definitions that automatically load the right skills.</p>
-        <ul class="comparison-examples">
-          <li>team-lead</li>
-          <li>implementer</li>
-          <li>reviewer</li>
-          <li>analyst</li>
-          <li>writer</li>
-        </ul>
+        <p class="workforce-def">Job definitions that automatically load the skills needed for the work.</p>
+      </div>
+      <div class="workforce-card workforce-card--team">
+        <h3>Teams</h3>
+        <p class="workforce-def">Roles collaborating to complete tasks.</p>
       </div>
     </div>
     <div class="role-tree">
@@ -213,14 +202,15 @@ strawpot start --role reviewer"
     </div>
   </section>
 
-  <!-- ===== EXAMPLE AI TEAM ===== -->
+  <!-- ===== EXAMPLE TEAMS ===== -->
   <section class="example-team">
-    <h2 class="section-title">Example AI Team</h2>
+    <h2 class="section-title">Example Teams</h2>
     <p class="section-subtitle">Roles define team composition. StrawPot handles delegation.</p>
     <div class="team-grid">
       <div class="team-tree-card">
         <h3>Engineering</h3>
         <pre class="tree-output"><code><span class="f">team-lead</span>
+ ├─ product-manager
  ├─ implementer
  ├─ tester
  └─ reviewer</code></pre>
@@ -232,65 +222,65 @@ strawpot start --role reviewer"
  ├─ writer
  └─ reviewer</code></pre>
       </div>
+      <div class="team-tree-card">
+        <h3>Support</h3>
+        <pre class="tree-output"><code><span class="f">support-lead</span>
+ ├─ ticket-analyzer
+ ├─ knowledge-search
+ └─ response-writer</code></pre>
+      </div>
     </div>
     <div class="team-workflow">
       <h3>Example workflow</h3>
       <p class="workflow-prompt"><span class="c">User request:</span> Add dark mode to the app.</p>
       <div class="workflow-steps">
         <div class="workflow-step">
-          <span class="workflow-role">team-lead</span>
-          <span class="workflow-action">analyzes task, creates sub-tasks</span>
+          <span class="workflow-role">product-manager</span>
+          <span class="workflow-action">writes the spec</span>
         </div>
         <div class="workflow-step">
           <span class="workflow-role">implementer</span>
-          <span class="workflow-action">implements the feature</span>
+          <span class="workflow-action">writes the code</span>
         </div>
         <div class="workflow-step">
           <span class="workflow-role">tester</span>
-          <span class="workflow-action">writes and runs tests</span>
+          <span class="workflow-action">generates tests</span>
         </div>
         <div class="workflow-step">
           <span class="workflow-role">reviewer</span>
-          <span class="workflow-action">reviews code, approves PR</span>
+          <span class="workflow-action">validates changes</span>
         </div>
         <div class="workflow-step workflow-step--human">
           <span class="workflow-role">human</span>
-          <span class="workflow-action">final approval and merge</span>
+          <span class="workflow-action">approves merge</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== REAL EXECUTION ===== -->
+  <!-- ===== EXECUTION FLOW ===== -->
   <section class="execution">
-    <h2 class="section-title">Real Execution</h2>
-    <p class="section-subtitle">See what StrawPot actually produces.</p>
-    <div class="execution-window">
-      <div class="code-tabs">
-        <div class="window-dots" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <span class="resolution-tab">strawpot start --role team-lead</span>
+    <h2 class="section-title">Execution Flow</h2>
+    <p class="section-subtitle">How roles collaborate to complete a task.</p>
+    <div class="flow-diagram">
+      <div class="flow-node flow-node--user">User Task</div>
+      <div class="flow-connector" aria-hidden="true"></div>
+      <div class="flow-node flow-node--lead">team-lead</div>
+      <div class="flow-connector" aria-hidden="true"></div>
+      <div class="flow-branch">
+        <div class="flow-node">implementer</div>
+        <div class="flow-node">tester</div>
+        <div class="flow-node">reviewer</div>
       </div>
-      <div class="execution-content">
-        <pre><code><span class="f">team-lead</span>    <span class="c">→ analyzing task</span>
-<span class="f">implementer</span> <span class="c">→ implementing solution</span>
-<span class="f">tester</span>      <span class="c">→ running tests</span>
-<span class="f">reviewer</span>    <span class="c">→ requested changes</span>
-<span class="f">implementer</span> <span class="c">→ updated code</span>
-<span class="f">reviewer</span>    <span class="c">→ approved PR</span>
-<span class="f">human</span>       <span class="c">→ merged</span>
-
-<span class="s">Task completed</span>
-<span class="s">Workspace cleaned up</span></code></pre>
-      </div>
+      <div class="flow-connector" aria-hidden="true"></div>
+      <div class="flow-node flow-node--result">result</div>
     </div>
   </section>
 
   <!-- ===== ROLE REGISTRY ===== -->
   <section id="registry" class="role-registry">
-    <h2 class="section-title">Role Registry</h2>
-    <p class="section-subtitle">StrawHub hosts roles that bundle skills and behavior. Install one or publish your own.</p>
+    <h2 class="section-title">StrawHub Role Registry</h2>
+    <p class="section-subtitle">StrawHub hosts reusable roles and skills. Installing a role automatically installs the skills required to perform that job.</p>
     <div class="registry-grid">
       <div class="role-card">
         <h3>Implementer</h3>
@@ -966,7 +956,7 @@ strawpot start --role reviewer"
 
   .team-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin-bottom: 3rem;
   }
@@ -1056,112 +1046,126 @@ strawpot start --role reviewer"
     color: var(--color-green);
   }
 
-  /* ===== REAL EXECUTION ===== */
-  .execution {
-    padding: 6rem 1.5rem;
-    max-width: 680px;
-    margin: 0 auto;
-  }
-
-  .execution-window {
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .execution-content {
-    padding: 1.5rem 2rem;
-  }
-
-  .execution-content pre {
-    margin: 0;
-    overflow-x: auto;
-  }
-
-  .execution-content code {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    line-height: 1.8;
-    color: var(--color-text);
-  }
-
-  /* ===== ROLES VS SKILLS ===== */
-  .roles-vs-skills {
+  /* ===== WORKFORCE MODEL ===== */
+  .workforce-model {
     padding: 6rem 1.5rem;
     max-width: var(--max-width);
     margin: 0 auto;
   }
 
-  .comparison-grid {
+  .workforce-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 
-  .comparison-card {
+  .workforce-card {
     background: var(--color-bg-surface);
     border: 1px solid var(--color-border);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.75rem;
     transition: all 0.25s;
   }
 
-  .comparison-card:hover {
+  .workforce-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   }
 
-  .comparison-card--role {
+  .workforce-card--role {
     border-color: rgba(232, 185, 49, 0.3);
   }
 
-  .comparison-card--role:hover {
+  .workforce-card--role:hover {
     border-color: rgba(232, 185, 49, 0.5);
   }
 
-  .comparison-card h3 {
+  .workforce-card--team {
+    border-color: rgba(74, 222, 128, 0.3);
+  }
+
+  .workforce-card--team:hover {
+    border-color: rgba(74, 222, 128, 0.5);
+  }
+
+  .workforce-card h3 {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--color-text);
     margin-bottom: 0.5rem;
   }
 
-  .comparison-def {
+  .workforce-def {
     color: var(--color-text-muted);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
   }
 
-  .comparison-examples {
-    list-style: none;
-    padding: 0;
+  /* ===== EXECUTION FLOW DIAGRAM ===== */
+  .execution {
+    padding: 6rem 1.5rem;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
-  .comparison-examples li {
-    position: relative;
-    padding-left: 1.25rem;
-    padding-bottom: 0.4rem;
-    color: var(--color-text-muted);
+  .flow-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .flow-node {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.65rem 1.5rem;
+    font-family: var(--font-mono);
     font-size: 0.88rem;
-    line-height: 1.5;
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: center;
   }
 
-  .comparison-examples li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.5em;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+  .flow-node--user {
+    background: var(--color-bg-elevated);
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+  }
+
+  .flow-node--lead {
+    border-color: var(--color-straw);
+    color: var(--color-straw);
+  }
+
+  .flow-node--result {
+    border-color: var(--color-green);
+    color: var(--color-green);
+  }
+
+  .flow-connector {
+    width: 1px;
+    height: 1.5rem;
     background: var(--color-border);
   }
 
-  .comparison-card--role .comparison-examples li::before {
-    background: var(--color-straw);
+  .flow-branch {
+    display: flex;
+    gap: 0.75rem;
+    position: relative;
+    padding-top: 0.5rem;
+  }
+
+  .flow-branch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 4rem);
+    height: 1px;
+    background: var(--color-border);
   }
 
   /* ===== FEATURES ===== */
@@ -1285,7 +1289,7 @@ strawpot start --role reviewer"
 
   /* ===== SECTION DIVIDERS ===== */
   .quickstart,
-  .roles-vs-skills,
+  .workforce-model,
   .example-team,
   .execution,
   .features,
@@ -1293,8 +1297,8 @@ strawpot start --role reviewer"
     position: relative;
   }
 
-  .roles-vs-skills::after,
-  .execution::after,
+  .workforce-model::after,
+  .example-team::after,
   .features::after,
   .role-registry::after {
     content: '';
@@ -1470,12 +1474,21 @@ strawpot start --role reviewer"
       max-width: 320px;
     }
 
-    .comparison-grid {
+    .workforce-grid {
       grid-template-columns: 1fr;
     }
 
     .team-grid {
       grid-template-columns: 1fr;
+    }
+
+    .flow-branch {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flow-branch::before {
+      display: none;
     }
 
     .features-grid {
@@ -1494,6 +1507,10 @@ strawpot start --role reviewer"
   @media (max-width: 1024px) and (min-width: 769px) {
     .features-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workforce-grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>
