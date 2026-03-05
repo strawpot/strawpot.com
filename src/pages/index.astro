@@ -22,7 +22,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-inner">
       <span class="hero-badge">Open Source &middot; v0.1 Early Preview</span>
       <h1 class="hero-title">StrawPot</h1>
-      <p class="hero-tagline">Run role-based AI workers locally.</p>
+      <p class="hero-tagline">AI agents work better in teams.</p>
       <p class="hero-subtitle">
         Install roles like Team&nbsp;Lead, Implementer, or Analyst.
         StrawPot automatically resolves the skills needed for the job and launches the team.
@@ -254,25 +254,6 @@ strawpot start --role reviewer"
           <span class="workflow-action">approves merge</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== EXECUTION FLOW ===== -->
-  <section class="execution">
-    <h2 class="section-title">Execution Flow</h2>
-    <p class="section-subtitle">How roles collaborate to complete a task.</p>
-    <div class="flow-diagram">
-      <div class="flow-node flow-node--user">User Task</div>
-      <div class="flow-connector" aria-hidden="true"></div>
-      <div class="flow-node flow-node--lead">team-lead</div>
-      <div class="flow-connector" aria-hidden="true"></div>
-      <div class="flow-branch">
-        <div class="flow-node">implementer</div>
-        <div class="flow-node">tester</div>
-        <div class="flow-node">reviewer</div>
-      </div>
-      <div class="flow-connector" aria-hidden="true"></div>
-      <div class="flow-node flow-node--result">result</div>
     </div>
   </section>
 
@@ -1101,72 +1082,6 @@ strawpot start --role reviewer"
     line-height: 1.6;
   }
 
-  /* ===== EXECUTION FLOW DIAGRAM ===== */
-  .execution {
-    padding: 6rem 1.5rem;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  .flow-diagram {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  .flow-node {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 0.65rem 1.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--color-text);
-    text-align: center;
-  }
-
-  .flow-node--user {
-    background: var(--color-bg-elevated);
-    border-color: var(--color-text-muted);
-    color: var(--color-text);
-  }
-
-  .flow-node--lead {
-    border-color: var(--color-straw);
-    color: var(--color-straw);
-  }
-
-  .flow-node--result {
-    border-color: var(--color-green);
-    color: var(--color-green);
-  }
-
-  .flow-connector {
-    width: 1px;
-    height: 1.5rem;
-    background: var(--color-border);
-  }
-
-  .flow-branch {
-    display: flex;
-    gap: 0.75rem;
-    position: relative;
-    padding-top: 0.5rem;
-  }
-
-  .flow-branch::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 4rem);
-    height: 1px;
-    background: var(--color-border);
-  }
-
   /* ===== FEATURES ===== */
   .features {
     padding: 6rem 1.5rem;
@@ -1290,7 +1205,6 @@ strawpot start --role reviewer"
   .quickstart,
   .workforce-model,
   .example-team,
-  .execution,
   .features,
   .role-registry {
     position: relative;
@@ -1479,15 +1393,6 @@ strawpot start --role reviewer"
 
     .team-grid {
       grid-template-columns: 1fr;
-    }
-
-    .flow-branch {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .flow-branch::before {
-      display: none;
     }
 
     .features-grid {
