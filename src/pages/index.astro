@@ -8,8 +8,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="top-nav-inner">
       <a href="/" class="nav-brand">StrawPot</a>
       <div class="nav-links">
-        <a href="#workforce" class="nav-link nav-link--primary">Roles</a>
-        <a href="#workforce" class="nav-link">Skills</a>
+        <a href="#workforce" class="nav-link nav-link--primary">Concepts</a>
         <a href="https://strawhub.dev" class="nav-link" target="_blank" rel="noopener">StrawHub</a>
         <a href="https://docs.strawpot.com/" class="nav-link" target="_blank" rel="noopener">Docs</a>
         <a href="https://github.com/strawpot/strawpot" class="nav-link" target="_blank" rel="noopener">GitHub</a>
@@ -20,9 +19,9 @@ import Layout from '../layouts/Layout.astro';
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-badge">Open Source &middot; v0.1 Early Preview</span>
+      <span class="hero-badge">Open Source &middot; Early Preview</span>
       <h1 class="hero-title">StrawPot</h1>
-      <p class="hero-tagline">AI agents work better in teams.</p>
+      <p class="hero-tagline">One install. A whole team.</p>
       <p class="hero-subtitle">
         One command spins up a PM, implementer, tester, and reviewer&mdash;they
         collaborate and ship a PR while you grab coffee.
@@ -55,14 +54,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="hero-actions">
         <a href="#quickstart" class="btn btn-primary">Run the 60-second demo</a>
-        <a
-          href="https://strawhub.dev"
-          class="btn btn-ghost"
-          target="_blank"
-          rel="noopener"
-        >
-          Browse roles on StrawHub
-        </a>
       </div>
       <div class="hero-links">
         <a href="https://discord.gg/buEbvEMC" class="hero-link hero-link--discord" target="_blank" rel="noopener">
@@ -83,9 +74,101 @@ import Layout from '../layouts/Layout.astro';
         <a href="https://strawhub.dev" class="hero-link hero-link--strawhub" target="_blank" rel="noopener">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           <span class="hero-link-label">StrawHub</span>
-          <span class="hero-link-sub">Install a role, get its skills</span>
+          <span class="hero-link-sub">Install a role, get its skills &amp; dependencies</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="workforce" class="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">Roles are jobs. Skills are abilities. Roles delegate work to dependent roles.</p>
+    <div class="workforce-grid">
+      <div class="workforce-card workforce-card--role">
+        <h3>Roles</h3>
+        <p class="workforce-def">Job definitions that auto-load the skills and dependent roles needed for the work.</p>
+      </div>
+      <div class="workforce-card">
+        <h3>Skills</h3>
+        <p class="workforce-def">Atomic capabilities&mdash;writing code, searching the web, analyzing data, drafting docs.</p>
+      </div>
+    </div>
+    <div class="role-tree">
+      <div class="resolution-window">
+        <div class="code-tabs">
+          <div class="window-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="resolution-tab">strawpot install role implementer</span>
+        </div>
+        <div class="resolution-content">
+          <pre class="tree-output"><code><span class="f">Role: implementer</span>
+ ├─ skills
+ │  ├─ <span class="s">git-workflow</span>
+ │  ├─ <span class="s">python-dev</span>
+ │  └─ <span class="s">run-tests</span>
+ └─ roles
+    ├─ <span class="f">code-reviewer</span>
+    └─ <span class="f">tester</span></code></pre>
+        </div>
+      </div>
+      <p class="tree-caption">Install a role &rarr; skills and dependent roles resolve automatically &rarr; agent is ready.</p>
+    </div>
+    <div class="registry-grid registry-grid--wide">
+      <div class="role-card">
+        <h3>Implementer</h3>
+        <div class="role-skills">
+          <span class="skill-chip">git-workflow</span>
+          <span class="skill-chip">python-dev</span>
+          <span class="skill-chip">run-tests</span>
+          <span class="role-chip">code-reviewer</span>
+          <span class="role-chip">tester</span>
+        </div>
+        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role implementer</span></code>
+      </div>
+      <div class="role-card">
+        <h3>Reviewer</h3>
+        <div class="role-skills">
+          <span class="skill-chip">code-review</span>
+          <span class="skill-chip">diff-analysis</span>
+          <span class="skill-chip">lint-gates</span>
+        </div>
+        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role reviewer</span></code>
+      </div>
+      <div class="role-card">
+        <h3>SW Dev Team Lead</h3>
+        <div class="role-skills">
+          <span class="skill-chip">task-breakdown</span>
+          <span class="skill-chip">merge-gating</span>
+          <span class="role-chip">implementer</span>
+          <span class="role-chip">reviewer</span>
+        </div>
+        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role sw-dev-team-lead</span></code>
+      </div>
+      <div class="role-card">
+        <h3>Researcher</h3>
+        <div class="role-skills">
+          <span class="skill-chip">web-search</span>
+          <span class="skill-chip">summarize</span>
+          <span class="skill-chip">source-eval</span>
+        </div>
+        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role researcher</span></code>
+      </div>
+      <div class="role-card">
+        <h3>Writer</h3>
+        <div class="role-skills">
+          <span class="skill-chip">draft-copy</span>
+          <span class="skill-chip">seo-optimize</span>
+          <span class="skill-chip">tone-match</span>
+          <span class="role-chip">editor</span>
+        </div>
+        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role writer</span></code>
+      </div>
+    </div>
+    <div class="registry-actions">
+      <a href="https://strawhub.dev" class="btn btn-primary" target="_blank" rel="noopener">Browse all roles on StrawHub</a>
+      <a href="https://docs.strawpot.com/strawhub/publishing/guide" class="btn btn-ghost" target="_blank" rel="noopener">Publish your own role</a>
     </div>
   </section>
 
@@ -181,180 +264,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ===== HOW IT WORKS ===== -->
-  <section id="workforce" class="how-it-works">
-    <h2 class="section-title">How It Works</h2>
-    <p class="section-subtitle">Skills are abilities. Roles are jobs. Teams are roles collaborating.</p>
-    <div class="workforce-grid">
-      <div class="workforce-card">
-        <h3>Skills</h3>
-        <p class="workforce-def">Atomic capabilities&mdash;writing code, searching the web, analyzing data, drafting docs.</p>
-      </div>
-      <div class="workforce-card workforce-card--role">
-        <h3>Roles</h3>
-        <p class="workforce-def">Job definitions that auto-load the skills needed for the work.</p>
-      </div>
-      <div class="workforce-card workforce-card--team">
-        <h3>Teams</h3>
-        <p class="workforce-def">Multiple roles collaborating to complete a task end-to-end.</p>
-      </div>
-    </div>
-    <div class="role-tree">
-      <div class="resolution-window">
-        <div class="code-tabs">
-          <div class="window-dots" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-          <span class="resolution-tab">strawpot resolve role implementer</span>
-        </div>
-        <div class="resolution-content">
-          <pre class="tree-output"><code><span class="f">Role: implementer</span>
- ├─ <span class="s">git-workflow</span>
- ├─ <span class="s">python-dev</span>
- ├─ <span class="s">run-tests</span>
- └─ <span class="s">code-review</span></code></pre>
-        </div>
-      </div>
-      <p class="tree-caption">Install a role &rarr; skills resolve automatically &rarr; agent is ready.</p>
-    </div>
-    <div class="registry-grid registry-grid--wide">
-      <div class="role-card">
-        <h3>Implementer</h3>
-        <div class="role-skills">
-          <span class="skill-chip">git-workflow</span>
-          <span class="skill-chip">python-dev</span>
-          <span class="skill-chip">run-tests</span>
-          <span class="skill-chip">code-review</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role implementer</span></code>
-      </div>
-      <div class="role-card">
-        <h3>Reviewer</h3>
-        <div class="role-skills">
-          <span class="skill-chip">code-review</span>
-          <span class="skill-chip">diff-analysis</span>
-          <span class="skill-chip">lint-gates</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role reviewer</span></code>
-      </div>
-      <div class="role-card">
-        <h3>Team Lead</h3>
-        <div class="role-skills">
-          <span class="skill-chip">task-breakdown</span>
-          <span class="skill-chip">delegation</span>
-          <span class="skill-chip">merge-gating</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role team-lead</span></code>
-      </div>
-      <div class="role-card">
-        <h3>Researcher</h3>
-        <div class="role-skills">
-          <span class="skill-chip">web-search</span>
-          <span class="skill-chip">summarize</span>
-          <span class="skill-chip">source-eval</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role researcher</span></code>
-      </div>
-      <div class="role-card">
-        <h3>Writer</h3>
-        <div class="role-skills">
-          <span class="skill-chip">draft-copy</span>
-          <span class="skill-chip">seo-optimize</span>
-          <span class="skill-chip">tone-match</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role writer</span></code>
-      </div>
-    </div>
-    <div class="registry-actions">
-      <a href="https://strawhub.dev" class="btn btn-primary" target="_blank" rel="noopener">Browse all roles on StrawHub</a>
-      <a href="https://docs.strawpot.com/strawhub/publishing/guide" class="btn btn-ghost" target="_blank" rel="noopener">Publish your own role</a>
-    </div>
-  </section>
-
-  <!-- ===== QUICK START ===== -->
-  <section id="quickstart" class="quickstart">
-    <h2 class="section-title">Quick Start</h2>
-    <div class="code-window">
-      <div class="code-tabs">
-        <div class="window-dots" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <button class="code-tab active" data-mode="install">Team Lead</button>
-        <button class="code-tab" data-mode="reviewer">Reviewer</button>
-        <button class="code-tab" data-mode="source">From Source</button>
-      </div>
-
-      <div class="code-block" data-mode="install">
-        <button
-          class="copy-btn"
-          data-copy="pip install strawpot
-strawpot install role team-lead
-strawpot start --role team-lead"
-          aria-label="Copy install command"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
-        <pre><code><span class="c"># Install StrawPot</span>
-<span class="p">$</span> pip install strawpot
-
-<span class="c"># Install a role from StrawHub</span>
-<span class="p">$</span> strawpot install <span class="s">role team-lead</span>
-
-<span class="c"># Start a session with the role</span>
-<span class="p">$</span> strawpot start <span class="f">--role</span> team-lead</code></pre>
-      </div>
-
-      <div class="code-block hidden" data-mode="reviewer">
-        <button
-          class="copy-btn"
-          data-copy="strawpot install role reviewer
-strawpot start --role reviewer"
-          aria-label="Copy reviewer commands"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
-        <pre><code><span class="c"># Install the reviewer role</span>
-<span class="p">$</span> strawpot install <span class="s">role reviewer</span>
-
-<span class="c"># Run review on the current repo</span>
-<span class="p">$</span> strawpot start <span class="f">--role</span> reviewer</code></pre>
-      </div>
-
-      <div class="code-block hidden" data-mode="source">
-        <button
-          class="copy-btn"
-          data-copy="git clone https://github.com/strawpot/strawpot && cd strawpot/cli && pip install -e '.[dev]'"
-          aria-label="Copy source install commands"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
-        <pre><code><span class="c"># Clone and install from source</span>
-<span class="p">$</span> git clone https://github.com/strawpot/strawpot
-<span class="p">$</span> <span class="f">cd</span> strawpot/cli
-<span class="p">$</span> pip install <span class="f">-e</span> <span class="s">".[dev]"</span></code></pre>
-      </div>
-    </div>
-  </section>
-
-
   <!-- ===== WHY STRAWPOT ===== -->
   <section class="features">
     <h2 class="section-title">Why StrawPot?</h2>
@@ -403,6 +312,89 @@ strawpot start --role reviewer"
     </div>
   </section>
 
+  <!-- ===== QUICK START ===== -->
+  <section id="quickstart" class="quickstart">
+    <h2 class="section-title">Quick Start</h2>
+    <div class="code-window">
+      <div class="code-tabs">
+        <div class="window-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <button class="code-tab active" data-mode="install">Team Lead</button>
+        <button class="code-tab" data-mode="reviewer">Reviewer</button>
+        <button class="code-tab" data-mode="source">From Source</button>
+      </div>
+
+      <div class="code-block" data-mode="install">
+        <button
+          class="copy-btn"
+          data-copy="pip install strawpot
+strawpot install role sw-dev-team-lead
+strawpot start --role sw-dev-team-lead"
+          aria-label="Copy install command"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+        <pre><code><span class="c"># Install StrawPot</span>
+<span class="p">$</span> pip install strawpot
+
+<span class="c"># Install a role from StrawHub</span>
+<span class="p">$</span> strawpot install <span class="s">role sw-dev-team-lead</span>
+
+<span class="c"># Start a session with the role</span>
+<span class="p">$</span> strawpot start <span class="f">--role</span> sw-dev-team-lead</code></pre>
+      </div>
+
+      <div class="code-block hidden" data-mode="reviewer">
+        <button
+          class="copy-btn"
+          data-copy="strawpot install role reviewer
+strawpot start --role reviewer"
+          aria-label="Copy reviewer commands"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+        <pre><code><span class="c"># Install the reviewer role</span>
+<span class="p">$</span> strawpot install <span class="s">role reviewer</span>
+
+<span class="c"># Run review on the current repo</span>
+<span class="p">$</span> strawpot start <span class="f">--role</span> reviewer</code></pre>
+      </div>
+
+      <div class="code-block hidden" data-mode="source">
+        <button
+          class="copy-btn"
+          data-copy="git clone https://github.com/strawpot/strawpot && cd strawpot/cli && pip install -e '.[dev]'"
+          aria-label="Copy source install commands"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+        <pre><code><span class="c"># Clone and install from source</span>
+<span class="p">$</span> git clone https://github.com/strawpot/strawpot
+<span class="p">$</span> <span class="f">cd</span> strawpot/cli
+<span class="p">$</span> pip install <span class="f">-e</span> <span class="s">".[dev]"</span></code></pre>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FINAL CTA ===== -->
   <section class="final-cta">
     <h2 class="section-title">Ready to build your team?</h2>
@@ -426,7 +418,6 @@ strawpot start --role reviewer"
     </div>
     <div class="hero-actions" style="animation:none;">
       <a href="#quickstart" class="btn btn-primary">Run the 60-second demo</a>
-      <a href="https://strawhub.dev" class="btn btn-ghost" target="_blank" rel="noopener">Browse roles on StrawHub</a>
     </div>
   </section>
 
@@ -454,7 +445,7 @@ strawpot start --role reviewer"
       <p class="subscribe-msg" id="subscribe-msg"></p>
     </div>
     <nav class="footer-links">
-      <a href="#workforce">Roles</a>
+      <a href="#workforce">Concepts</a>
       <span class="footer-sep" aria-hidden="true">&middot;</span>
       <a href="https://discord.gg/buEbvEMC" target="_blank" rel="noopener">Discord</a>
       <span class="footer-sep" aria-hidden="true">&middot;</span>
@@ -988,6 +979,21 @@ strawpot start --role reviewer"
     border-color: rgba(232, 185, 49, 0.3);
   }
 
+  .role-chip {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.65rem;
+    background: rgba(232, 185, 49, 0.08);
+    border: 1px solid rgba(232, 185, 49, 0.25);
+    border-radius: 100px;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    transition: border-color 0.2s;
+  }
+
+  .role-chip:hover {
+    border-color: rgba(232, 185, 49, 0.5);
+  }
+
   /* ===== ROLE TREE / RESOLUTION WINDOW (shared) ===== */
   .resolution-window {
     background: var(--color-bg-elevated);
@@ -1198,8 +1204,10 @@ strawpot start --role reviewer"
 
   .workforce-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+    max-width: 42rem;
+    margin: 0 auto;
   }
 
   .workforce-card {
@@ -1603,7 +1611,7 @@ strawpot start --role reviewer"
     }
 
     .workforce-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>
