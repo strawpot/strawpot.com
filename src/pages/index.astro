@@ -93,41 +93,88 @@ import Layout from '../layouts/Layout.astro';
   <section class="see-it">
     <h2 class="section-title">See It in Action</h2>
     <p class="section-subtitle">You talk to the team lead. It delegates to the right roles&mdash;each running in an isolated worktree.</p>
-    <div class="see-it-prompt">
-      <span class="see-it-label">You:</span> &ldquo;Add dark mode to the app.&rdquo;
+    <div class="see-it-tabs">
+      <button class="see-it-tab active" data-example="dev">Engineering</button>
+      <button class="see-it-tab" data-example="research">Research</button>
     </div>
-    <div class="delegation-tree">
-      <div class="deleg-root">
-        <span class="deleg-role deleg-role--lead">team-lead</span>
-        <span class="deleg-action">breaks down the task, delegates</span>
+    <div class="see-it-example" data-example="dev">
+      <div class="see-it-prompt">
+        <span class="see-it-label">You:</span> &ldquo;Add dark mode to the app.&rdquo;
       </div>
-      <div class="deleg-branches">
-        <div class="deleg-branch">
-          <div class="deleg-connector" aria-hidden="true"></div>
-          <div class="deleg-node">
-            <span class="deleg-role">product-manager</span>
-            <span class="deleg-action">writes the spec</span>
+      <div class="delegation-tree">
+        <div class="deleg-root">
+          <span class="deleg-role deleg-role--lead">sw-dev-team-lead</span>
+          <span class="deleg-action">breaks down the task, delegates</span>
+        </div>
+        <div class="deleg-branches">
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">product-manager</span>
+              <span class="deleg-action">writes the spec</span>
+            </div>
+          </div>
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">implementer</span>
+              <span class="deleg-action">writes the code</span>
+            </div>
+          </div>
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">tester</span>
+              <span class="deleg-action">generates tests</span>
+            </div>
+          </div>
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">reviewer</span>
+              <span class="deleg-action">validates &amp; ships PR</span>
+            </div>
           </div>
         </div>
-        <div class="deleg-branch">
-          <div class="deleg-connector" aria-hidden="true"></div>
-          <div class="deleg-node">
-            <span class="deleg-role">implementer</span>
-            <span class="deleg-action">writes the code</span>
-          </div>
+      </div>
+    </div>
+    <div class="see-it-example hidden" data-example="research">
+      <div class="see-it-prompt">
+        <span class="see-it-label">You:</span> &ldquo;Research competitors and draft a strategy memo.&rdquo;
+      </div>
+      <div class="delegation-tree">
+        <div class="deleg-root">
+          <span class="deleg-role deleg-role--lead">research-team-lead</span>
+          <span class="deleg-action">breaks down the task, delegates</span>
         </div>
-        <div class="deleg-branch">
-          <div class="deleg-connector" aria-hidden="true"></div>
-          <div class="deleg-node">
-            <span class="deleg-role">tester</span>
-            <span class="deleg-action">generates tests</span>
+        <div class="deleg-branches">
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">researcher</span>
+              <span class="deleg-action">gathers data &amp; sources</span>
+            </div>
           </div>
-        </div>
-        <div class="deleg-branch">
-          <div class="deleg-connector" aria-hidden="true"></div>
-          <div class="deleg-node">
-            <span class="deleg-role">reviewer</span>
-            <span class="deleg-action">validates &amp; ships PR</span>
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">analyst</span>
+              <span class="deleg-action">identifies patterns</span>
+            </div>
+          </div>
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">writer</span>
+              <span class="deleg-action">drafts the memo</span>
+            </div>
+          </div>
+          <div class="deleg-branch">
+            <div class="deleg-connector" aria-hidden="true"></div>
+            <div class="deleg-node">
+              <span class="deleg-role">editor</span>
+              <span class="deleg-action">refines &amp; fact-checks</span>
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +188,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="workforce-grid">
       <div class="workforce-card">
         <h3>Skills</h3>
-        <p class="workforce-def">Atomic capabilities&mdash;writing code, searching docs, running tests.</p>
+        <p class="workforce-def">Atomic capabilities&mdash;writing code, searching the web, analyzing data, drafting docs.</p>
       </div>
       <div class="workforce-card workforce-card--role">
         <h3>Roles</h3>
@@ -170,7 +217,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <p class="tree-caption">Install a role &rarr; skills resolve automatically &rarr; agent is ready.</p>
     </div>
-    <div class="registry-grid">
+    <div class="registry-grid registry-grid--wide">
       <div class="role-card">
         <h3>Implementer</h3>
         <div class="role-skills">
@@ -198,6 +245,24 @@ import Layout from '../layouts/Layout.astro';
           <span class="skill-chip">merge-gating</span>
         </div>
         <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role team-lead</span></code>
+      </div>
+      <div class="role-card">
+        <h3>Researcher</h3>
+        <div class="role-skills">
+          <span class="skill-chip">web-search</span>
+          <span class="skill-chip">summarize</span>
+          <span class="skill-chip">source-eval</span>
+        </div>
+        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role researcher</span></code>
+      </div>
+      <div class="role-card">
+        <h3>Writer</h3>
+        <div class="role-skills">
+          <span class="skill-chip">draft-copy</span>
+          <span class="skill-chip">seo-optimize</span>
+          <span class="skill-chip">tone-match</span>
+        </div>
+        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role writer</span></code>
       </div>
     </div>
     <div class="registry-actions">
@@ -974,6 +1039,41 @@ strawpot start --role reviewer"
     text-align: center;
   }
 
+  .see-it-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .see-it-tab {
+    padding: 0.5rem 1.25rem;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .see-it-tab:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+  }
+
+  .see-it-tab.active {
+    background: var(--color-straw);
+    border-color: var(--color-straw);
+    color: var(--color-bg-deep);
+  }
+
+  .see-it-example.hidden {
+    display: none;
+  }
+
   .see-it-prompt {
     font-size: 1.1rem;
     color: var(--color-text);
@@ -1200,6 +1300,10 @@ strawpot start --role reviewer"
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin-bottom: 2rem;
+  }
+
+  .registry-grid--wide {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .role-card {
@@ -1448,7 +1552,8 @@ strawpot start --role reviewer"
       grid-template-columns: 1fr;
     }
 
-    .registry-grid {
+    .registry-grid,
+    .registry-grid--wide {
       grid-template-columns: 1fr;
     }
 
@@ -1532,6 +1637,17 @@ strawpot start --role reviewer"
       }
       btn.classList.add('copied');
       setTimeout(() => btn.classList.remove('copied'), 2000);
+    });
+  });
+
+  // See-it example tab switching
+  document.querySelectorAll('.see-it-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const example = (tab as HTMLElement).dataset.example;
+      document.querySelectorAll('.see-it-tab').forEach((t) => t.classList.remove('active'));
+      document.querySelectorAll('.see-it-example').forEach((e) => e.classList.add('hidden'));
+      tab.classList.add('active');
+      document.querySelector(`.see-it-example[data-example="${example}"]`)?.classList.remove('hidden');
     });
   });
 
