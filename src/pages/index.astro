@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="top-nav-inner">
       <a href="/" class="nav-brand">StrawPot</a>
       <div class="nav-links">
-        <a href="#workforce" class="nav-link nav-link--primary">Concepts</a>
+        <a href="#how-it-works" class="nav-link nav-link--primary">How It Works</a>
         <a href="https://strawhub.dev" class="nav-link" target="_blank" rel="noopener">StrawHub</a>
         <a href="https://docs.strawpot.com/" class="nav-link" target="_blank" rel="noopener">Docs</a>
         <a href="https://github.com/strawpot/strawpot" class="nav-link" target="_blank" rel="noopener">GitHub</a>
@@ -16,16 +16,19 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== 1. HERO ===== -->
   <section class="hero">
     <div class="hero-inner">
       <span class="hero-badge">Open Source &middot; Early Preview</span>
-      <h1 class="hero-title">StrawPot</h1>
-      <p class="hero-tagline">One install. A whole team.</p>
-      <p class="hero-subtitle">
-        One command spins up a PM, implementer, tester, and reviewer&mdash;they
-        collaborate and ship a PR while you grab coffee.
+      <h1 class="hero-title">Run an AI Company<br/>on Your Laptop</h1>
+      <p class="hero-tagline">
+        One engineer. A full AI workforce&mdash;CEO, product manager, engineer, tester, reviewer&mdash;collaborating to ship your product.
       </p>
+      <p class="hero-credibility">Built for engineers who want to build products&mdash;not run companies.</p>
+      <div class="hero-actions">
+        <a href="#quickstart" class="btn btn-primary">Get Started</a>
+        <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
+      </div>
       <div class="hero-social-proof">
         <a href="https://github.com/strawpot/strawpot" class="github-stars" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -34,303 +37,245 @@ import Layout from '../layouts/Layout.astro';
         <span class="social-sep">&middot;</span>
         <span class="social-label">Open Source &middot; MIT License</span>
       </div>
-      <div class="hero-install">
-        <code class="hero-cmd">
-          <span class="p">$</span> pip install strawpot
-        </code>
-        <button
-          class="copy-btn hero-copy"
-          data-copy="pip install strawpot"
-          aria-label="Copy install command"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
-      </div>
-      <div class="hero-actions">
-        <a href="#quickstart" class="btn btn-primary">Run the 60-second demo</a>
-      </div>
-      <div class="hero-links">
-        <a href="https://discord.gg/buEbvEMC" class="hero-link hero-link--discord" target="_blank" rel="noopener">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
-          <span class="hero-link-label">Discord</span>
-          <span class="hero-link-sub">Join the community</span>
-        </a>
-        <a href="https://docs.strawpot.com/" class="hero-link hero-link--docs" target="_blank" rel="noopener">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          <span class="hero-link-label">Documentation</span>
-          <span class="hero-link-sub">Read the documentation</span>
-        </a>
-        <a href="https://github.com/strawpot/strawpot" class="hero-link hero-link--github" target="_blank" rel="noopener">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span class="hero-link-label">GitHub</span>
-          <span class="hero-link-sub">View the source</span>
-        </a>
-        <a href="https://strawhub.dev" class="hero-link hero-link--strawhub" target="_blank" rel="noopener">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span class="hero-link-label">StrawHub</span>
-          <span class="hero-link-sub">Install a role, get its skills &amp; dependencies</span>
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- ===== HOW IT WORKS ===== -->
-  <section id="workforce" class="how-it-works">
-    <h2 class="section-title">How It Works</h2>
-    <p class="section-subtitle">Roles are jobs. Skills are abilities. Roles delegate work to dependent roles.</p>
-    <div class="workforce-grid">
-      <div class="workforce-card workforce-card--role">
-        <h3>Roles</h3>
-        <p class="workforce-def">Job definitions that auto-load the skills and dependent roles needed for the work.</p>
+  <!-- ===== 2. PROBLEM STORY ===== -->
+  <section class="problem">
+    <div class="problem-inner">
+      <h2 class="section-title">Great engineers struggle to run companies</h2>
+      <p class="problem-lead">Building technology is only a small part of running a startup.</p>
+      <div class="problem-roles">
+        <span class="problem-role">Strategy</span>
+        <span class="problem-role">Product planning</span>
+        <span class="problem-role">Coordination</span>
+        <span class="problem-role">Documentation</span>
+        <span class="problem-role">Code review</span>
+        <span class="problem-role">Testing</span>
+        <span class="problem-role">Operations</span>
       </div>
-      <div class="workforce-card">
-        <h3>Skills</h3>
-        <p class="workforce-def">Atomic capabilities&mdash;writing code, searching the web, analyzing data, drafting docs.</p>
-      </div>
+      <p class="problem-pain">Most engineers never trained for these roles.</p>
+      <p class="problem-solution">StrawPot lets AI handle those roles so you can focus on building.</p>
     </div>
-    <div class="role-tree">
-      <div class="resolution-window">
-        <div class="code-tabs">
-          <div class="window-dots" aria-hidden="true">
-            <span></span><span></span><span></span>
+  </section>
+
+  <!-- ===== 3. KEY INSIGHT ===== -->
+  <section class="insight">
+    <div class="insight-inner">
+      <h2 class="section-title">A company is just roles collaborating</h2>
+      <div class="insight-diagram">
+        <div class="resolution-window">
+          <div class="code-tabs">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="resolution-tab">Company Structure</span>
           </div>
-          <span class="resolution-tab">strawpot install role implementer</span>
-        </div>
-        <div class="resolution-content">
-          <pre class="tree-output"><code><span class="f">Role: implementer</span>
- ├─ skills
- │  ├─ <span class="s">git-workflow</span>
- │  ├─ <span class="s">python-dev</span>
- │  └─ <span class="s">run-tests</span>
- └─ roles
-    ├─ <span class="f">code-reviewer</span>
-    └─ <span class="f">tester</span></code></pre>
+          <div class="resolution-content">
+<pre class="tree-output"><code> <span class="f">CEO</span>
+ ├── <span class="f">Product Manager</span>
+ │    └── <span class="s">Analyst</span>
+ ├── <span class="f">Engineer</span>
+ │    └── <span class="s">Tester</span>
+ └── <span class="f">Reviewer</span></code></pre>
+          </div>
         </div>
       </div>
-      <p class="tree-caption">Install a role &rarr; skills and dependent roles resolve automatically &rarr; agent is ready.</p>
-    </div>
-    <div class="registry-grid registry-grid--wide">
-      <div class="role-card">
-        <h3>Implementer</h3>
-        <div class="role-skills">
-          <span class="skill-chip">git-workflow</span>
-          <span class="skill-chip">python-dev</span>
-          <span class="skill-chip">run-tests</span>
-          <span class="role-chip">code-reviewer</span>
-          <span class="role-chip">tester</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role implementer</span></code>
-      </div>
-      <div class="role-card">
-        <h3>Reviewer</h3>
-        <div class="role-skills">
-          <span class="skill-chip">code-review</span>
-          <span class="skill-chip">diff-analysis</span>
-          <span class="skill-chip">lint-gates</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role reviewer</span></code>
-      </div>
-      <div class="role-card">
-        <h3>SW Dev Team Lead</h3>
-        <div class="role-skills">
-          <span class="skill-chip">task-breakdown</span>
-          <span class="skill-chip">merge-gating</span>
-          <span class="role-chip">implementer</span>
-          <span class="role-chip">reviewer</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role sw-dev-team-lead</span></code>
-      </div>
-      <div class="role-card">
-        <h3>Researcher</h3>
-        <div class="role-skills">
-          <span class="skill-chip">web-search</span>
-          <span class="skill-chip">summarize</span>
-          <span class="skill-chip">source-eval</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role researcher</span></code>
-      </div>
-      <div class="role-card">
-        <h3>Writer</h3>
-        <div class="role-skills">
-          <span class="skill-chip">draft-copy</span>
-          <span class="skill-chip">seo-optimize</span>
-          <span class="skill-chip">tone-match</span>
-          <span class="role-chip">editor</span>
-        </div>
-        <code class="role-install"><span class="p">$</span> strawpot install <span class="s">role writer</span></code>
-      </div>
-    </div>
-    <div class="registry-actions">
-      <a href="https://strawhub.dev" class="btn btn-primary" target="_blank" rel="noopener">Browse all roles on StrawHub</a>
-      <a href="https://docs.strawpot.com/strawhub/publishing/guide" class="btn btn-ghost" target="_blank" rel="noopener">Publish your own role</a>
+      <p class="insight-punchline">StrawPot replaces these roles with AI workers.</p>
     </div>
   </section>
 
-  <!-- ===== SEE IT IN ACTION ===== -->
-  <section class="see-it">
-    <h2 class="section-title">See It in Action</h2>
-    <p class="section-subtitle">You talk to the team lead. It delegates to the right roles&mdash;each running in an isolated worktree.</p>
+  <!-- ===== 4. HOW IT WORKS ===== -->
+  <section id="how-it-works" class="product-intro">
+    <h2 class="section-title">Run an AI startup team</h2>
+    <p class="section-subtitle">You give a task. StrawPot creates a team of AI workers that collaborate to complete it.</p>
+
     <div class="see-it-tabs">
-      <button class="see-it-tab active" data-example="dev">Engineering</button>
+      <button class="see-it-tab active" data-example="pm">Product Management</button>
+      <button class="see-it-tab" data-example="marketing">Marketing</button>
       <button class="see-it-tab" data-example="research">Research</button>
+      <button class="see-it-tab" data-example="sales">Sales</button>
+      <button class="see-it-tab" data-example="dev">Engineering</button>
     </div>
-    <div class="see-it-example" data-example="dev">
+
+    <div class="see-it-example hidden" data-example="sales">
+      <div class="see-it-prompt">
+        <span class="see-it-label">You:</span> &ldquo;Build a cold outreach sequence for Series A founders.&rdquo;
+      </div>
+      <div class="delegation-flow">
+        <div class="flow-step">
+          <span class="flow-role">Sales Lead</span>
+          <span class="flow-action">defines target persona &amp; strategy</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Researcher</span>
+          <span class="flow-action">builds prospect list &amp; profiles</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Writer</span>
+          <span class="flow-action">drafts email sequences</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Editor</span>
+          <span class="flow-action">optimizes subject lines &amp; CTAs</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Reviewer</span>
+          <span class="flow-action">validates tone &amp; compliance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="see-it-example hidden" data-example="dev">
       <div class="see-it-prompt">
         <span class="see-it-label">You:</span> &ldquo;Add dark mode to the app.&rdquo;
       </div>
-      <div class="delegation-tree">
-        <div class="deleg-root">
-          <span class="deleg-role deleg-role--lead">sw-dev-team-lead</span>
-          <span class="deleg-action">breaks down the task, delegates</span>
+      <div class="delegation-flow">
+        <div class="flow-step">
+          <span class="flow-role">Team Lead</span>
+          <span class="flow-action">breaks down the task, delegates</span>
         </div>
-        <div class="deleg-branches">
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">product-manager</span>
-              <span class="deleg-action">writes the spec</span>
-            </div>
-          </div>
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">implementer</span>
-              <span class="deleg-action">writes the code</span>
-            </div>
-          </div>
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">tester</span>
-              <span class="deleg-action">generates tests</span>
-            </div>
-          </div>
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">reviewer</span>
-              <span class="deleg-action">validates &amp; ships PR</span>
-            </div>
-          </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Product Manager</span>
+          <span class="flow-action">writes the spec</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Engineer</span>
+          <span class="flow-action">writes the code</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Tester</span>
+          <span class="flow-action">generates tests</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Reviewer</span>
+          <span class="flow-action">validates &amp; ships PR</span>
         </div>
       </div>
     </div>
+
     <div class="see-it-example hidden" data-example="research">
       <div class="see-it-prompt">
         <span class="see-it-label">You:</span> &ldquo;Research competitors and draft a strategy memo.&rdquo;
       </div>
-      <div class="delegation-tree">
-        <div class="deleg-root">
-          <span class="deleg-role deleg-role--lead">research-team-lead</span>
-          <span class="deleg-action">breaks down the task, delegates</span>
+      <div class="delegation-flow">
+        <div class="flow-step">
+          <span class="flow-role">Research Lead</span>
+          <span class="flow-action">breaks down the task, delegates</span>
         </div>
-        <div class="deleg-branches">
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">researcher</span>
-              <span class="deleg-action">gathers data &amp; sources</span>
-            </div>
-          </div>
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">analyst</span>
-              <span class="deleg-action">identifies patterns</span>
-            </div>
-          </div>
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">writer</span>
-              <span class="deleg-action">drafts the memo</span>
-            </div>
-          </div>
-          <div class="deleg-branch">
-            <div class="deleg-connector" aria-hidden="true"></div>
-            <div class="deleg-node">
-              <span class="deleg-role">editor</span>
-              <span class="deleg-action">refines &amp; fact-checks</span>
-            </div>
-          </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Researcher</span>
+          <span class="flow-action">gathers data &amp; sources</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Analyst</span>
+          <span class="flow-action">identifies patterns</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Writer</span>
+          <span class="flow-action">drafts the memo</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Editor</span>
+          <span class="flow-action">refines &amp; fact-checks</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="see-it-example" data-example="pm">
+      <div class="see-it-prompt">
+        <span class="see-it-label">You:</span> &ldquo;Break the Q2 roadmap into tasks and prioritize.&rdquo;
+      </div>
+      <div class="delegation-flow">
+        <div class="flow-step">
+          <span class="flow-role">Product Lead</span>
+          <span class="flow-action">scopes the roadmap, delegates</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Analyst</span>
+          <span class="flow-action">reviews metrics &amp; user feedback</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Product Manager</span>
+          <span class="flow-action">writes specs &amp; acceptance criteria</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Writer</span>
+          <span class="flow-action">drafts the roadmap document</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Reviewer</span>
+          <span class="flow-action">validates priorities &amp; feasibility</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="see-it-example hidden" data-example="marketing">
+      <div class="see-it-prompt">
+        <span class="see-it-label">You:</span> &ldquo;Write a launch blog post and social media campaign.&rdquo;
+      </div>
+      <div class="delegation-flow">
+        <div class="flow-step">
+          <span class="flow-role">Marketing Lead</span>
+          <span class="flow-action">plans the campaign, delegates</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Researcher</span>
+          <span class="flow-action">analyzes audience &amp; competitors</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Writer</span>
+          <span class="flow-action">drafts blog post &amp; copy</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Editor</span>
+          <span class="flow-action">refines tone &amp; messaging</span>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-step">
+          <span class="flow-role">Reviewer</span>
+          <span class="flow-action">approves &amp; schedules posts</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY STRAWPOT ===== -->
-  <section class="features">
-    <h2 class="section-title">Why StrawPot?</h2>
-    <p class="section-subtitle">Multi-agent frameworks make you wire graphs. StrawPot gives you a workforce.</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/>
-          </svg>
-        </div>
-        <h3>Roles, Not Graphs</h3>
-        <p>
-          No DAGs, no edges, no state machines. Define roles with skills and
-          let StrawPot handle coordination.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="4 17 10 11 4 5"></polyline>
-            <line x1="12" y1="19" x2="20" y2="19"></line>
-          </svg>
-        </div>
-        <h3>Any Agent Runtime</h3>
-        <p>
-          Claude&nbsp;Code, Codex, Gemini, or your own. Assign different
-          runtimes per role&mdash;mix and match freely.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-          </svg>
-        </div>
-        <h3>Open Registry</h3>
-        <p>
-          StrawHub is npm for AI roles. Install community roles or publish
-          your own&mdash;skills resolve like dependencies.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== QUICK START ===== -->
+  <!-- ===== 5. CLI / QUICK START ===== -->
   <section id="quickstart" class="quickstart">
-    <h2 class="section-title">Quick Start</h2>
+    <h2 class="section-title">Start your AI company</h2>
     <div class="code-window">
       <div class="code-tabs">
         <div class="window-dots" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
-        <button class="code-tab active" data-mode="install">Team Lead</button>
-        <button class="code-tab" data-mode="reviewer">Reviewer</button>
-        <button class="code-tab" data-mode="source">From Source</button>
+        <span class="resolution-tab">Terminal</span>
       </div>
 
-      <div class="code-block" data-mode="install">
+      <div class="code-block">
         <button
           class="copy-btn"
           data-copy="pip install strawpot
 strawpot install role sw-dev-team-lead
-strawpot start --role sw-dev-team-lead"
+strawpot start"
           aria-label="Copy install command"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -341,63 +286,156 @@ strawpot start --role sw-dev-team-lead"
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </button>
-        <pre><code><span class="c"># Install StrawPot</span>
-<span class="p">$</span> pip install strawpot
-
-<span class="c"># Install a role from StrawHub</span>
+        <pre><code><span class="p">$</span> pip install strawpot
 <span class="p">$</span> strawpot install <span class="s">role sw-dev-team-lead</span>
-
-<span class="c"># Start a session with the role</span>
-<span class="p">$</span> strawpot start <span class="f">--role</span> sw-dev-team-lead</code></pre>
+<span class="p">$</span> strawpot start</code></pre>
       </div>
+    </div>
 
-      <div class="code-block hidden" data-mode="reviewer">
-        <button
-          class="copy-btn"
-          data-copy="strawpot install role reviewer
-strawpot start --role reviewer"
-          aria-label="Copy reviewer commands"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
-        <pre><code><span class="c"># Install the reviewer role</span>
-<span class="p">$</span> strawpot install <span class="s">role reviewer</span>
-
-<span class="c"># Run review on the current repo</span>
-<span class="p">$</span> strawpot start <span class="f">--role</span> reviewer</code></pre>
-      </div>
-
-      <div class="code-block hidden" data-mode="source">
-        <button
-          class="copy-btn"
-          data-copy="git clone https://github.com/strawpot/strawpot && cd strawpot/cli && pip install -e '.[dev]'"
-          aria-label="Copy source install commands"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
-        <pre><code><span class="c"># Clone and install from source</span>
-<span class="p">$</span> git clone https://github.com/strawpot/strawpot
-<span class="p">$</span> <span class="f">cd</span> strawpot/cli
-<span class="p">$</span> pip install <span class="f">-e</span> <span class="s">".[dev]"</span></code></pre>
+    <div class="cli-output">
+      <div class="code-window">
+        <div class="code-tabs">
+          <div class="window-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="resolution-tab">Output</span>
+        </div>
+        <div class="code-block">
+          <pre><code><span class="c">Team Lead</span>    planning roadmap
+<span class="c">PM</span>           writing specification
+<span class="c">Engineer</span>     implementing feature
+<span class="c">Tester</span>       generating tests
+<span class="c">Reviewer</span>     approving changes
+<span class="s">&#10003; PR shipped</span></code></pre>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FINAL CTA ===== -->
+  <!-- ===== 6. USE CASES ===== -->
+  <section class="use-cases">
+    <h2 class="section-title">What can an AI company do?</h2>
+    <div class="use-cases-grid">
+      <div class="use-case-card">
+        <h3>Build software</h3>
+        <p class="use-case-example">&ldquo;Build a todo app with login.&rdquo;</p>
+        <p class="use-case-desc">Team lead delegates to PM, engineer, tester, and reviewer&mdash;ships a PR.</p>
+      </div>
+      <div class="use-case-card">
+        <h3>Research</h3>
+        <p class="use-case-example">&ldquo;Analyze competitors in robotics.&rdquo;</p>
+        <p class="use-case-desc">Researcher gathers data, analyst finds patterns, writer drafts the report.</p>
+      </div>
+      <div class="use-case-card">
+        <h3>Operations</h3>
+        <p class="use-case-example">&ldquo;Prepare investor update report.&rdquo;</p>
+        <p class="use-case-desc">Writer pulls metrics, analyst interprets trends, editor polishes output.</p>
+      </div>
+      <div class="use-case-card">
+        <h3>Project management</h3>
+        <p class="use-case-example">&ldquo;Break roadmap into tasks.&rdquo;</p>
+        <p class="use-case-desc">PM structures milestones, team lead assigns to roles, tracks progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. WHY ENGINEERS LOVE THIS ===== -->
+  <section class="why-engineers">
+    <h2 class="section-title">Built for engineers who hate running companies</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="why-icon">&#10005;</span>
+        <span class="why-text">No meetings</span>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">&#10005;</span>
+        <span class="why-text">No management overhead</span>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">&#10005;</span>
+        <span class="why-text">No coordination burden</span>
+      </div>
+      <div class="why-item why-item--positive">
+        <span class="why-icon why-icon--yes">&#10003;</span>
+        <span class="why-text">Focus on building</span>
+      </div>
+    </div>
+    <p class="why-punchline">One engineer can run a team of AI workers.</p>
+  </section>
+
+  <!-- ===== 8. ARCHITECTURE ===== -->
+  <section class="architecture">
+    <h2 class="section-title">How StrawPot Works</h2>
+    <div class="arch-grid">
+      <div class="arch-item">
+        <h3>Role-based AI agents</h3>
+        <p>Each role is a Markdown file with skills and dependencies. No Python. No boilerplate.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Open skill registry</h3>
+        <p>StrawHub is npm for AI roles. Install community roles or publish your own.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Any agent runtime</h3>
+        <p>Claude Code, Codex, Gemini, or your own. Assign different runtimes per role.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Local execution</h3>
+        <p>Everything runs on your machine. Your code never leaves your laptop.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Memory &amp; context</h3>
+        <p>Agents share knowledge across sessions. Your AI company learns over time.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Agent orchestration</h3>
+        <p>Automatic delegation, isolation, and merge strategies. You give the task; StrawPot runs the team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. VISION ===== -->
+  <section class="vision">
+    <div class="vision-inner">
+      <h2 class="section-title">The future company</h2>
+      <p class="vision-text">
+        The future company may look different.<br/>
+        One human. Hundreds of AI workers.
+      </p>
+      <p class="vision-punchline">StrawPot is an operating system for that future.</p>
+    </div>
+  </section>
+
+  <!-- ===== 10. OPEN SOURCE ===== -->
+  <section class="open-source">
+    <h2 class="section-title">Open source &amp; community driven</h2>
+    <div class="os-links">
+      <a href="https://github.com/strawpot/strawpot" class="hero-link hero-link--github" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span class="hero-link-label">GitHub</span>
+        <span class="hero-link-sub">View source &amp; contribute</span>
+      </a>
+      <a href="https://docs.strawpot.com/" class="hero-link hero-link--docs" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span class="hero-link-label">Docs</span>
+        <span class="hero-link-sub">Read the documentation</span>
+      </a>
+      <a href="https://strawhub.dev" class="hero-link hero-link--strawhub" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="hero-link-label">StrawHub</span>
+        <span class="hero-link-sub">Browse roles &amp; skills</span>
+      </a>
+      <a href="https://discord.gg/buEbvEMC" class="hero-link hero-link--discord" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
+        <span class="hero-link-label">Discord</span>
+        <span class="hero-link-sub">Join the community</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 11. FINAL CTA ===== -->
   <section class="final-cta">
-    <h2 class="section-title">Ready to build your team?</h2>
+    <h2 class="section-title">Start your AI company</h2>
     <div class="hero-install" style="animation:none;">
       <code class="hero-cmd">
         <span class="p">$</span> pip install strawpot
@@ -417,7 +455,8 @@ strawpot start --role reviewer"
       </button>
     </div>
     <div class="hero-actions" style="animation:none;">
-      <a href="#quickstart" class="btn btn-primary">Run the 60-second demo</a>
+      <a href="https://docs.strawpot.com/" class="btn btn-primary" target="_blank" rel="noopener">Read Docs</a>
+      <a href="https://github.com/strawpot/strawpot" class="btn btn-ghost" target="_blank" rel="noopener">View on GitHub</a>
     </div>
   </section>
 
@@ -445,7 +484,7 @@ strawpot start --role reviewer"
       <p class="subscribe-msg" id="subscribe-msg"></p>
     </div>
     <nav class="footer-links">
-      <a href="#workforce">Concepts</a>
+      <a href="#how-it-works">How It Works</a>
       <span class="footer-sep" aria-hidden="true">&middot;</span>
       <a href="https://discord.gg/buEbvEMC" target="_blank" rel="noopener">Discord</a>
       <span class="footer-sep" aria-hidden="true">&middot;</span>
@@ -530,8 +569,8 @@ strawpot start --role reviewer"
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 6rem 1.5rem 4rem;
+    min-height: 85vh;
+    padding: 6rem 1.5rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -589,10 +628,10 @@ strawpot start --role reviewer"
   .hero-title {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #fff 0%, var(--color-straw-light) 30%, var(--color-straw) 70%, var(--color-straw-dark) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -602,20 +641,30 @@ strawpot start --role reviewer"
 
   .hero-tagline {
     font-family: var(--font-body);
-    font-weight: 500;
-    font-size: clamp(1.2rem, 3vw, 1.75rem);
-    color: var(--color-text);
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 0.6s ease-out 0.15s both;
+    font-weight: 400;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--color-text-muted);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.7;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
   }
 
-  .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    color: var(--color-text-muted);
-    max-width: 640px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.7;
-    animation: fadeInUp 0.6s ease-out 0.25s both;
+  .hero-credibility {
+    font-size: 0.95rem;
+    color: var(--color-straw);
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.6s ease-out 0.4s both;
   }
 
   .hero-social-proof {
@@ -623,8 +672,7 @@ strawpot start --role reviewer"
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 0.6s ease-out 0.3s both;
+    animation: fadeInUp 0.6s ease-out 0.5s both;
   }
 
   .github-stars {
@@ -656,99 +704,6 @@ strawpot start --role reviewer"
 
   .social-label {
     font-size: 0.82rem;
-    color: var(--color-text-muted);
-  }
-
-  .hero-install {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 0.6rem 0.75rem 0.6rem 1.25rem;
-    margin-bottom: 2rem;
-    max-width: 100%;
-    animation: fadeInUp 0.6s ease-out 0.35s both;
-  }
-
-  .hero-cmd {
-    font-family: var(--font-mono);
-    font-size: 0.92rem;
-    color: var(--color-text);
-    white-space: nowrap;
-  }
-
-  .hero-cmd .p {
-    color: var(--color-green);
-    user-select: none;
-  }
-
-  .hero-install .copy-btn {
-    position: static;
-    top: auto;
-    right: auto;
-    flex-shrink: 0;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    animation: fadeInUp 0.6s ease-out 0.5s both;
-  }
-
-  .hero-links {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    max-width: 720px;
-    margin: 2rem auto 0;
-    animation: fadeInUp 0.6s ease-out 0.65s both;
-  }
-
-  .hero-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 1.25rem 1rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    transition: transform 0.2s, border-color 0.2s;
-    color: var(--color-text);
-  }
-
-  .hero-link:hover {
-    transform: translateY(-3px);
-    color: var(--color-text);
-  }
-
-  .hero-link--discord:hover {
-    border-color: #5865f2;
-  }
-
-  .hero-link--docs:hover {
-    border-color: var(--color-straw);
-  }
-
-  .hero-link--github:hover {
-    border-color: #8b949e;
-  }
-
-  .hero-link--strawhub:hover {
-    border-color: var(--color-straw);
-  }
-
-  .hero-link-label {
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .hero-link-sub {
-    font-size: 0.78rem;
     color: var(--color-text-muted);
   }
 
@@ -814,235 +769,119 @@ strawpot start --role reviewer"
     margin-top: -0.25rem;
   }
 
-  /* ===== QUICK START ===== */
-  .quickstart {
-    padding: var(--section-padding);
-    max-width: 680px;
+  /* ===== 2. PROBLEM STORY ===== */
+  .problem {
+    padding: 4rem 1.5rem;
+    max-width: var(--max-width);
     margin: 0 auto;
-  }
-
-  .code-window {
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .code-tabs {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--color-border);
-    background: var(--color-bg-surface);
-  }
-
-  .window-dots {
-    display: flex;
-    gap: 6px;
-    padding: 0 1rem;
-  }
-
-  .window-dots span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--color-border);
-  }
-
-  .window-dots span:first-child {
-    background: #ff5f57;
-  }
-
-  .window-dots span:nth-child(2) {
-    background: #febc2e;
-  }
-
-  .window-dots span:nth-child(3) {
-    background: #28c840;
-  }
-
-  .code-tab {
-    padding: 0.7rem 1.25rem;
-    background: none;
-    border: none;
-    color: var(--color-text-muted);
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
+    text-align: center;
     position: relative;
-    transition: color 0.2s;
   }
 
-  .code-tab:hover {
-    color: var(--color-text);
-  }
-
-  .code-tab.active {
-    color: var(--color-straw);
-  }
-
-  .code-tab.active::after {
+  .problem::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--color-straw);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
   }
 
-  .code-block {
-    position: relative;
-    padding: 1.5rem;
-  }
-
-  .code-block.hidden {
-    display: none;
-  }
-
-  .code-block pre {
-    margin: 0;
-    overflow-x: auto;
-  }
-
-  .code-block code {
-    font-family: var(--font-mono);
-    font-size: 0.88rem;
-    line-height: 1.8;
-    color: var(--color-text);
-  }
-
-  .code-block .c {
+  .problem-lead {
+    font-size: 1.15rem;
     color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
   }
 
-  .code-block .p {
-    color: var(--color-green);
-    user-select: none;
+  .problem-roles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .code-block .f {
-    color: var(--color-straw);
-  }
-
-  .code-block .s {
-    color: var(--color-green);
-  }
-
-  .copy-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+  .problem-role {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
     background: var(--color-bg-surface);
     border: 1px solid var(--color-border);
-    color: var(--color-text-muted);
-    padding: 0.4rem;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-  }
-
-  .copy-btn:hover {
-    color: var(--color-text);
-    border-color: var(--color-text-muted);
-  }
-
-  .copy-btn .check-icon {
-    display: none;
-  }
-
-  .copy-btn.copied .check-icon {
-    display: block;
-    color: var(--color-green);
-  }
-
-  .copy-btn.copied svg:first-child {
-    display: none;
-  }
-
-  /* ===== SKILL CHIPS (shared) ===== */
-  .skill-chip {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.65rem;
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
     border-radius: 100px;
     color: var(--color-text-muted);
-    font-family: var(--font-mono);
-    transition: border-color 0.2s;
+    font-family: var(--font-body);
   }
 
-  .skill-chip:hover {
-    border-color: rgba(232, 185, 49, 0.3);
+  .problem-pain {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
   }
 
-  .role-chip {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.65rem;
-    background: rgba(232, 185, 49, 0.08);
-    border: 1px solid rgba(232, 185, 49, 0.25);
-    border-radius: 100px;
-    color: var(--color-accent);
-    font-family: var(--font-mono);
-    transition: border-color 0.2s;
-  }
-
-  .role-chip:hover {
-    border-color: rgba(232, 185, 49, 0.5);
-  }
-
-  /* ===== ROLE TREE / RESOLUTION WINDOW (shared) ===== */
-  .resolution-window {
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .resolution-tab {
-    font-family: var(--font-mono);
-    font-size: 0.82rem;
+  .problem-solution {
+    font-size: 1.15rem;
     color: var(--color-straw);
-    padding: 0.7rem 1.25rem;
+    font-weight: 500;
   }
 
-  .resolution-content {
-    padding: 1.5rem 2rem;
-  }
-
-  .role-tree {
-    max-width: 520px;
-    margin: 2.5rem auto 0;
-  }
-
-  .tree-output {
-    margin: 0;
-    overflow-x: auto;
-  }
-
-  .tree-output code {
-    font-family: var(--font-mono);
-    font-size: 0.88rem;
-    line-height: 1.8;
-    color: var(--color-text);
-  }
-
-  .tree-caption {
-    text-align: center;
-    color: var(--color-text-muted);
-    font-size: 0.92rem;
-    margin-top: 1rem;
-  }
-
-  /* ===== SEE IT IN ACTION ===== */
-  .see-it {
+  /* ===== 3. KEY INSIGHT ===== */
+  .insight {
     padding: 6rem 1.5rem;
     max-width: var(--max-width);
     margin: 0 auto;
     text-align: center;
+    position: relative;
+  }
+
+  .insight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .insight-diagram {
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+
+  .insight-punchline {
+    font-size: 1.15rem;
+    color: var(--color-straw);
+    font-weight: 500;
+    margin-top: 2rem;
+  }
+
+  /* ===== 4. PRODUCT INTRO / HOW IT WORKS ===== */
+  .product-intro {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .product-intro::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
   }
 
   .see-it-tabs {
@@ -1097,289 +936,81 @@ strawpot start --role reviewer"
     margin-right: 0.5rem;
   }
 
-  /* Delegation tree */
-  .delegation-tree {
+  /* ===== DELEGATION FLOW (vertical) ===== */
+  .delegation-flow {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
+    max-width: 360px;
+    margin: 0 auto;
   }
 
-  .deleg-root {
+  .flow-step {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
-    padding: 1.25rem 2rem;
+    gap: 0.3rem;
+    padding: 1rem 2rem;
     background: var(--color-bg-surface);
-    border: 2px solid var(--color-straw);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    transition: all 0.25s;
   }
 
-  .deleg-role {
+  .flow-step:first-child {
+    border-color: var(--color-straw);
+    border-width: 2px;
+  }
+
+  .flow-step:hover {
+    border-color: rgba(232, 185, 49, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .flow-role {
     font-family: var(--font-mono);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--color-straw);
   }
 
-  .deleg-role--lead {
-    font-size: 1rem;
-  }
-
-  .deleg-action {
+  .flow-action {
     color: var(--color-text-muted);
     font-size: 0.85rem;
   }
 
-  .deleg-branches {
-    display: flex;
-    gap: 1.25rem;
+  .flow-arrow {
+    width: 1px;
+    height: 1.5rem;
+    background: var(--color-border);
     position: relative;
-    padding-top: 2.5rem;
   }
 
-  /* Horizontal bar connecting all branches */
-  .deleg-branches::before {
+  .flow-arrow::after {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: -3px;
     left: 50%;
-    width: 1px;
-    height: 1.25rem;
-    background: var(--color-border);
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--color-border);
   }
 
-  .deleg-branches::after {
-    content: '';
-    position: absolute;
-    top: 1.25rem;
-    /* spans from first branch center to last branch center */
-    left: calc(12.5% + 0.625rem);
-    right: calc(12.5% + 0.625rem);
-    height: 1px;
-    background: var(--color-border);
-  }
-
-  .deleg-branch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .deleg-connector {
-    width: 1px;
-    height: 1.25rem;
-    background: var(--color-border);
-  }
-
-  .deleg-node {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 1rem 1.25rem;
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    min-width: 150px;
-    transition: all 0.25s;
-  }
-
-  .deleg-node:hover {
-    border-color: rgba(232, 185, 49, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  }
-
-  /* ===== HOW IT WORKS ===== */
-  .how-it-works {
+  /* ===== 5. QUICK START ===== */
+  .quickstart {
     padding: 6rem 1.5rem;
-    max-width: var(--max-width);
+    max-width: 680px;
     margin: 0 auto;
-  }
-
-  .workforce-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-    max-width: 42rem;
-    margin: 0 auto;
-  }
-
-  .workforce-card {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.75rem;
-    transition: all 0.25s;
-  }
-
-  .workforce-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  }
-
-  .workforce-card--role {
-    border-color: rgba(232, 185, 49, 0.3);
-  }
-
-  .workforce-card--role:hover {
-    border-color: rgba(232, 185, 49, 0.5);
-  }
-
-  .workforce-card--team {
-    border-color: rgba(74, 222, 128, 0.3);
-  }
-
-  .workforce-card--team:hover {
-    border-color: rgba(74, 222, 128, 0.5);
-  }
-
-  .workforce-card h3 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.15rem;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-
-  .workforce-def {
-    color: var(--color-text-muted);
-    font-size: 0.92rem;
-    line-height: 1.6;
-  }
-
-  /* ===== FEATURES ===== */
-  .features {
-    padding: 6rem 1.5rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
-
-  .features .section-title {
-    margin-bottom: 2.5rem;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-
-  .feature-card {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.75rem;
-    transition: all 0.25s;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(232, 185, 49, 0.2);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  }
-
-  .feature-icon {
-    color: var(--color-straw);
-    margin-bottom: 1rem;
-  }
-
-  .feature-card h3 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text);
-  }
-
-  .feature-card p {
-    color: var(--color-text-muted);
-    font-size: 0.92rem;
-    line-height: 1.6;
-  }
-
-  .registry-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    margin-bottom: 2rem;
-  }
-
-  .registry-grid--wide {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .role-card {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.75rem;
-    transition: all 0.25s;
-  }
-
-  .role-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(232, 185, 49, 0.2);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  }
-
-  .role-card h3 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.15rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-text);
-  }
-
-  .role-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .role-install {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--color-text-muted);
-    background: var(--color-bg-elevated);
-    padding: 0.4rem 0.65rem;
-    border-radius: 6px;
-  }
-
-  .role-install .p {
-    color: var(--color-green);
-    user-select: none;
-  }
-
-  .role-install .s {
-    color: var(--color-green);
-  }
-
-  .registry-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* ===== SECTION DIVIDERS ===== */
-  .quickstart,
-  .see-it,
-  .how-it-works,
-  .features {
     position: relative;
   }
 
-  .see-it::after,
-  .how-it-works::after,
-  .features::after {
+  .quickstart::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1388,12 +1019,435 @@ strawpot start --role reviewer"
     width: 60%;
     max-width: 400px;
     height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      var(--color-border) 50%,
-      transparent 100%
-    );
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .cli-output {
+    margin-top: 1.5rem;
+  }
+
+  .code-window {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .code-tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-surface);
+  }
+
+  .window-dots {
+    display: flex;
+    gap: 6px;
+    padding: 0 1rem;
+  }
+
+  .window-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-border);
+  }
+
+  .window-dots span:first-child {
+    background: #ff5f57;
+  }
+
+  .window-dots span:nth-child(2) {
+    background: #febc2e;
+  }
+
+  .window-dots span:nth-child(3) {
+    background: #28c840;
+  }
+
+  .code-block {
+    position: relative;
+    padding: 1.5rem;
+  }
+
+  .code-block.hidden {
+    display: none;
+  }
+
+  .code-block pre {
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .code-block code {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--color-text);
+  }
+
+  .code-block .c {
+    color: var(--color-text-muted);
+  }
+
+  .code-block .p {
+    color: var(--color-green);
+    user-select: none;
+  }
+
+  .code-block .f {
+    color: var(--color-straw);
+  }
+
+  .code-block .s {
+    color: var(--color-green);
+  }
+
+  .resolution-window {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .resolution-tab {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--color-straw);
+    padding: 0.7rem 1.25rem;
+  }
+
+  .resolution-content {
+    padding: 1.5rem 2rem;
+    text-align: left;
+  }
+
+  .tree-output {
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .tree-output code {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--color-text);
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 0.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .copy-btn:hover {
+    color: var(--color-text);
+    border-color: var(--color-text-muted);
+  }
+
+  .copy-btn .check-icon {
+    display: none;
+  }
+
+  .copy-btn.copied .check-icon {
+    display: block;
+    color: var(--color-green);
+  }
+
+  .copy-btn.copied svg:first-child {
+    display: none;
+  }
+
+  /* ===== 6. USE CASES ===== */
+  .use-cases {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .use-cases::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .use-case-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: all 0.25s;
+  }
+
+  .use-case-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232, 185, 49, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .use-case-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+
+  .use-case-example {
+    font-style: italic;
+    color: var(--color-straw);
+    font-size: 0.92rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .use-case-desc {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* ===== 7. WHY ENGINEERS ===== */
+  .why-engineers {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .why-engineers::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2.5rem auto;
+    max-width: 600px;
+  }
+
+  .why-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+  }
+
+  .why-icon {
+    color: #f87171;
+    font-size: 1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .why-icon--yes {
+    color: var(--color-green);
+  }
+
+  .why-item--positive .why-text {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .why-punchline {
+    font-size: 1.15rem;
+    color: var(--color-straw);
+    font-weight: 500;
+  }
+
+  /* ===== 8. ARCHITECTURE ===== */
+  .architecture {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .architecture::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .arch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .arch-item {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.25s;
+  }
+
+  .arch-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232, 185, 49, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .arch-item h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-text);
+  }
+
+  .arch-item p {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* ===== 9. VISION ===== */
+  .vision {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .vision::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .vision-text {
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .vision-punchline {
+    font-size: 1.15rem;
+    color: var(--color-straw);
+    font-weight: 500;
+  }
+
+  /* ===== 10. OPEN SOURCE ===== */
+  .open-source {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .open-source::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .os-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 720px;
+    margin: 2rem auto 0;
+  }
+
+  .hero-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1.25rem 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: transform 0.2s, border-color 0.2s;
+    color: var(--color-text);
+  }
+
+  .hero-link:hover {
+    transform: translateY(-3px);
+    color: var(--color-text);
+  }
+
+  .hero-link--discord:hover {
+    border-color: #5865f2;
+  }
+
+  .hero-link--docs:hover {
+    border-color: var(--color-straw);
+  }
+
+  .hero-link--github:hover {
+    border-color: #8b949e;
+  }
+
+  .hero-link--strawhub:hover {
+    border-color: var(--color-straw);
+  }
+
+  .hero-link-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .hero-link-sub {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
   }
 
   /* ===== FINAL CTA ===== */
@@ -1408,8 +1462,35 @@ strawpot start --role reviewer"
     margin-bottom: 2rem;
   }
 
-  .final-cta .hero-install {
+  .hero-install {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.75rem 0.6rem 1.25rem;
     margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  .hero-cmd {
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    color: var(--color-text);
+    white-space: nowrap;
+  }
+
+  .hero-cmd .p {
+    color: var(--color-green);
+    user-select: none;
+  }
+
+  .hero-install .copy-btn {
+    position: static;
+    top: auto;
+    right: auto;
+    flex-shrink: 0;
   }
 
   /* ===== SUBSCRIBE (footer) ===== */
@@ -1547,48 +1628,22 @@ strawpot start --role reviewer"
       padding: 7rem 1.5rem 4rem;
     }
 
-    .hero-links {
+    .use-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .arch-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .os-links {
       grid-template-columns: 1fr;
       max-width: 320px;
     }
 
-    .workforce-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .registry-grid,
-    .registry-grid--wide {
-      grid-template-columns: 1fr;
-    }
-
-    .deleg-branches {
+    .why-grid {
       flex-direction: column;
       align-items: center;
-      gap: 0;
-      padding-top: 0;
-    }
-
-    .deleg-branches::before,
-    .deleg-branches::after {
-      display: none;
-    }
-
-    .deleg-branch {
-      flex-direction: row;
-      gap: 0;
-    }
-
-    .deleg-connector {
-      width: 1.5rem;
-      height: 1px;
-    }
-
-    .deleg-node {
-      min-width: 200px;
     }
 
     .subscribe-form {
@@ -1603,14 +1658,18 @@ strawpot start --role reviewer"
     .social-sep {
       display: none;
     }
+
+    .delegation-flow {
+      max-width: 100%;
+    }
   }
 
   @media (max-width: 1024px) and (min-width: 769px) {
-    .features-grid {
+    .arch-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .workforce-grid {
+    .use-cases-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -1656,17 +1715,6 @@ strawpot start --role reviewer"
       document.querySelectorAll('.see-it-example').forEach((e) => e.classList.add('hidden'));
       tab.classList.add('active');
       document.querySelector(`.see-it-example[data-example="${example}"]`)?.classList.remove('hidden');
-    });
-  });
-
-  // Tab switching
-  document.querySelectorAll('.code-tab').forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const mode = (tab as HTMLElement).dataset.mode;
-      document.querySelectorAll('.code-tab').forEach((t) => t.classList.remove('active'));
-      document.querySelectorAll('.code-block').forEach((b) => b.classList.add('hidden'));
-      tab.classList.add('active');
-      document.querySelector(`.code-block[data-mode="${mode}"]`)?.classList.remove('hidden');
     });
   });
 
