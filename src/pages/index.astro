@@ -50,9 +50,9 @@ import Layout from '../layouts/Layout.astro';
         <span class="problem-role">Product planning</span>
         <span class="problem-role">Coordination</span>
         <span class="problem-role">Documentation</span>
-        <span class="problem-role">Code review</span>
+        <span class="problem-role">Sales</span>
         <span class="problem-role">Testing</span>
-        <span class="problem-role">Operations</span>
+        <span class="problem-role">Finance</span>
       </div>
       <p class="problem-pain">Most engineers never trained for these roles.</p>
       <p class="problem-solution">StrawPot lets AI handle those roles so you can focus on building.</p>
@@ -274,7 +274,7 @@ import Layout from '../layouts/Layout.astro';
         <button
           class="copy-btn"
           data-copy="pip install strawpot
-strawpot install role sw-dev-team-lead
+strawpot install role ai-ceo
 strawpot start"
           aria-label="Copy install command"
         >
@@ -287,7 +287,7 @@ strawpot start"
           </svg>
         </button>
         <pre><code><span class="p">$</span> pip install strawpot
-<span class="p">$</span> strawpot install <span class="s">role sw-dev-team-lead</span>
+<span class="p">$</span> strawpot install <span class="s">role ai-ceo</span>
 <span class="p">$</span> strawpot start</code></pre>
       </div>
     </div>
@@ -301,12 +301,12 @@ strawpot start"
           <span class="resolution-tab">Output</span>
         </div>
         <div class="code-block">
-          <pre><code><span class="c">Team Lead</span>    planning roadmap
+          <pre><code><span class="c">CEO</span>          planning strategy
 <span class="c">PM</span>           writing specification
 <span class="c">Engineer</span>     implementing feature
 <span class="c">Tester</span>       generating tests
 <span class="c">Reviewer</span>     approving changes
-<span class="s">&#10003; PR shipped</span></code></pre>
+<span class="s">&#10003; Task complete</span></code></pre>
         </div>
       </div>
     </div>
@@ -811,11 +811,12 @@ strawpot start"
   .problem-role {
     font-size: 0.85rem;
     padding: 0.4rem 1rem;
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 100px;
-    color: var(--color-text-muted);
+    color: var(--color-text);
     font-family: var(--font-body);
+    font-weight: 500;
   }
 
   .problem-pain {
