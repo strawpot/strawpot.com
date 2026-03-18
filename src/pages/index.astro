@@ -40,6 +40,13 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ===== DEMO GIF ===== -->
+  <section class="demo-section">
+    <div class="demo-inner">
+      <img src="/demo.gif" alt="StrawPot GUI — agent delegation tree, session traces, and Bot Imu chat" class="demo-gif" loading="eager" />
+    </div>
+  </section>
+
   <!-- ===== 2. PROBLEM STORY ===== -->
   <section class="problem">
     <div class="problem-inner">
@@ -764,6 +771,26 @@ strawpot gui"
 
   .section-title + .section-subtitle {
     margin-top: -0.25rem;
+  }
+
+  /* ===== DEMO GIF ===== */
+  .demo-section {
+    padding: 0 1.5rem 3rem;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .demo-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .demo-gif {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(232, 185, 49, 0.08);
   }
 
   /* ===== 2. PROBLEM STORY ===== */
