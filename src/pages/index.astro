@@ -20,11 +20,17 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero">
     <div class="hero-inner">
       <span class="hero-badge">Open Source &middot; Early Preview</span>
-      <h1 class="hero-title">One engineer. One laptop.<br/>One AI company.</h1>
+
+      <!-- Demo first — the first thing visitors see -->
+      <div class="hero-demo">
+        <img src="/demo.png" alt="StrawPot GUI — agent delegation tree, session traces, and Bot Imu chat" class="demo-gif" loading="eager" />
+      </div>
+
+      <h1 class="hero-title">Run an AI company<br/>on your laptop.</h1>
       <p class="hero-tagline">
-        A full AI workforce&mdash;CEO, product manager, engineer, tester, reviewer&mdash;collaborating to ship your product.
+        Launch features, write posts, and plan execution&mdash;without PM, marketing, or ops.
       </p>
-      <p class="hero-credibility">Built for engineers who want to build products&mdash;not run companies.</p>
+      <p class="hero-credibility">Give it one goal. It runs the rest.</p>
       <div class="hero-actions">
         <a href="#quickstart" class="btn btn-primary">Get Started</a>
         <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
@@ -40,227 +46,47 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ===== DEMO GIF ===== -->
-  <section class="demo-section">
-    <div class="demo-inner">
-      <img src="/demo.png" alt="StrawPot GUI — agent delegation tree, session traces, and Bot Imu chat" class="demo-gif" loading="eager" />
+  <!-- ===== 2. PROOF — WHAT IT PRODUCES ===== -->
+  <section class="proof">
+    <h2 class="section-title">What it actually produces</h2>
+    <p class="section-subtitle">One goal in. Real artifacts out.</p>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <h3>Launch Plan</h3>
+        <p class="proof-meta">Target: engineers / Rollout: X + GitHub</p>
+        <p class="proof-desc">Milestones, ownership, timeline&mdash;ready to execute.</p>
+      </div>
+      <div class="proof-card">
+        <h3>X Post</h3>
+        <p class="proof-meta">&ldquo;We replaced our PM with AI...&rdquo;</p>
+        <p class="proof-desc">On-brand copy, hooks, and thread structure&mdash;drafted and ready to publish.</p>
+      </div>
+      <div class="proof-card">
+        <h3>Engineering Tasks</h3>
+        <p class="proof-meta">Implement API / Add UI / Write tests</p>
+        <p class="proof-desc">Scoped tickets with acceptance criteria, assigned to AI workers.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ===== 2. PROBLEM STORY ===== -->
-  <section class="problem">
-    <div class="problem-inner">
-      <h2 class="section-title">Great engineers want to build.</h2>
-      <p class="problem-lead">But running a company requires:</p>
-      <div class="problem-roles">
-        <span class="problem-role">Planning</span>
-        <span class="problem-role">Coordination</span>
-        <span class="problem-role">Testing</span>
-        <span class="problem-role">Documentation</span>
-        <span class="problem-role">Marketing</span>
-        <span class="problem-role">Sales</span>
+  <!-- ===== 3. HOW IT WORKS ===== -->
+  <section id="how-it-works" class="how-steps">
+    <h2 class="section-title">How it works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-number">1</span>
+        <h3>Define a goal</h3>
+        <p>&ldquo;Launch the new API with docs, tests, and an announcement post.&rdquo;</p>
       </div>
-      <p class="problem-pain">Most engineers never trained for these roles.</p>
-      <p class="problem-solution">StrawPot replaces the rest of the company with AI workers.</p>
-    </div>
-  </section>
-
-  <!-- ===== 3. KEY INSIGHT ===== -->
-  <section class="insight">
-    <div class="insight-inner">
-      <h2 class="section-title">A company is just roles collaborating</h2>
-      <div class="insight-diagram">
-        <div class="resolution-window">
-          <div class="code-tabs">
-            <div class="window-dots" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-            <span class="resolution-tab">Company Structure</span>
-          </div>
-          <div class="resolution-content">
-<pre class="tree-output"><code> <span class="f">CEO</span>
- ├── <span class="f">Product Manager</span>
- │    └── <span class="s">Analyst</span>
- ├── <span class="f">Engineer</span>
- │    └── <span class="s">Tester</span>
- └── <span class="f">Reviewer</span></code></pre>
-          </div>
-        </div>
+      <div class="step-card">
+        <span class="step-number">2</span>
+        <h3>AI roles collaborate</h3>
+        <p>PM writes the spec. Engineer builds. Tester validates. Writer drafts the post.</p>
       </div>
-      <p class="insight-punchline">StrawPot replaces these roles with AI workers.</p>
-    </div>
-  </section>
-
-  <!-- ===== 4. HOW IT WORKS ===== -->
-  <section id="how-it-works" class="product-intro">
-    <h2 class="section-title">Run an AI startup team</h2>
-    <p class="section-subtitle">You give a task. StrawPot creates a team of AI workers that collaborate to complete it.</p>
-
-    <div class="see-it-tabs">
-      <button class="see-it-tab active" data-example="pm">Product Management</button>
-      <button class="see-it-tab" data-example="marketing">Marketing</button>
-      <button class="see-it-tab" data-example="research">Research</button>
-      <button class="see-it-tab" data-example="sales">Sales</button>
-      <button class="see-it-tab" data-example="dev">Engineering</button>
-    </div>
-
-    <div class="see-it-example hidden" data-example="sales">
-      <div class="see-it-prompt">
-        <span class="see-it-label">You:</span> &ldquo;Build a cold outreach sequence for Series A founders.&rdquo;
-      </div>
-      <div class="delegation-flow">
-        <div class="flow-step">
-          <span class="flow-role">Sales Lead</span>
-          <span class="flow-action">defines target persona &amp; strategy</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Researcher</span>
-          <span class="flow-action">builds prospect list &amp; profiles</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Writer</span>
-          <span class="flow-action">drafts email sequences</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Editor</span>
-          <span class="flow-action">optimizes subject lines &amp; CTAs</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Reviewer</span>
-          <span class="flow-action">validates tone &amp; compliance</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="see-it-example hidden" data-example="dev">
-      <div class="see-it-prompt">
-        <span class="see-it-label">You:</span> &ldquo;Add dark mode to the app.&rdquo;
-      </div>
-      <div class="delegation-flow">
-        <div class="flow-step">
-          <span class="flow-role">Team Lead</span>
-          <span class="flow-action">breaks down the task, delegates</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Product Manager</span>
-          <span class="flow-action">writes the spec</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Engineer</span>
-          <span class="flow-action">writes the code</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Tester</span>
-          <span class="flow-action">generates tests</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Reviewer</span>
-          <span class="flow-action">validates &amp; ships PR</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="see-it-example hidden" data-example="research">
-      <div class="see-it-prompt">
-        <span class="see-it-label">You:</span> &ldquo;Research competitors and draft a strategy memo.&rdquo;
-      </div>
-      <div class="delegation-flow">
-        <div class="flow-step">
-          <span class="flow-role">Research Lead</span>
-          <span class="flow-action">breaks down the task, delegates</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Researcher</span>
-          <span class="flow-action">gathers data &amp; sources</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Analyst</span>
-          <span class="flow-action">identifies patterns</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Writer</span>
-          <span class="flow-action">drafts the memo</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Editor</span>
-          <span class="flow-action">refines &amp; fact-checks</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="see-it-example" data-example="pm">
-      <div class="see-it-prompt">
-        <span class="see-it-label">You:</span> &ldquo;Break the Q2 roadmap into tasks and prioritize.&rdquo;
-      </div>
-      <div class="delegation-flow">
-        <div class="flow-step">
-          <span class="flow-role">Product Lead</span>
-          <span class="flow-action">scopes the roadmap, delegates</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Analyst</span>
-          <span class="flow-action">reviews metrics &amp; user feedback</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Product Manager</span>
-          <span class="flow-action">writes specs &amp; acceptance criteria</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Writer</span>
-          <span class="flow-action">drafts the roadmap document</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Reviewer</span>
-          <span class="flow-action">validates priorities &amp; feasibility</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="see-it-example hidden" data-example="marketing">
-      <div class="see-it-prompt">
-        <span class="see-it-label">You:</span> &ldquo;Write a launch blog post and social media campaign.&rdquo;
-      </div>
-      <div class="delegation-flow">
-        <div class="flow-step">
-          <span class="flow-role">Marketing Lead</span>
-          <span class="flow-action">plans the campaign, delegates</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Researcher</span>
-          <span class="flow-action">analyzes audience &amp; competitors</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Writer</span>
-          <span class="flow-action">drafts blog post &amp; copy</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Editor</span>
-          <span class="flow-action">refines tone &amp; messaging</span>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="flow-step">
-          <span class="flow-role">Reviewer</span>
-          <span class="flow-action">approves &amp; schedules posts</span>
-        </div>
+      <div class="step-card">
+        <span class="step-number">3</span>
+        <h3>Outputs are generated</h3>
+        <p>Launch plan, code, tests, and marketing copy&mdash;all in your local workspace.</p>
       </div>
     </div>
   </section>
@@ -316,97 +142,22 @@ strawpot gui"
     </div>
   </section>
 
-  <!-- ===== 6. USE CASES ===== -->
-  <section class="use-cases">
-    <h2 class="section-title">What can an AI company do?</h2>
-    <div class="use-cases-grid">
-      <div class="use-case-card">
-        <h3>Build software</h3>
-        <p class="use-case-example">&ldquo;Build a todo app with login.&rdquo;</p>
-        <p class="use-case-desc">Team lead delegates to PM, engineer, tester, and reviewer&mdash;ships a PR.</p>
-      </div>
-      <div class="use-case-card">
-        <h3>Research</h3>
-        <p class="use-case-example">&ldquo;Analyze competitors in robotics.&rdquo;</p>
-        <p class="use-case-desc">Researcher gathers data, analyst finds patterns, writer drafts the report.</p>
-      </div>
-      <div class="use-case-card">
-        <h3>Operations</h3>
-        <p class="use-case-example">&ldquo;Prepare investor update report.&rdquo;</p>
-        <p class="use-case-desc">Writer pulls metrics, analyst interprets trends, editor polishes output.</p>
-      </div>
-      <div class="use-case-card">
-        <h3>Project management</h3>
-        <p class="use-case-example">&ldquo;Break roadmap into tasks.&rdquo;</p>
-        <p class="use-case-desc">PM structures milestones, team lead assigns to roles, tracks progress.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 7. WHY ENGINEERS LOVE THIS ===== -->
-  <section class="why-engineers">
-    <h2 class="section-title">Built for engineers who hate running companies</h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <span class="why-icon">&#10005;</span>
-        <span class="why-text">No meetings</span>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">&#10005;</span>
-        <span class="why-text">No management overhead</span>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">&#10005;</span>
-        <span class="why-text">No coordination burden</span>
-      </div>
-      <div class="why-item why-item--positive">
-        <span class="why-icon why-icon--yes">&#10003;</span>
-        <span class="why-text">Focus on building</span>
-      </div>
-    </div>
-    <p class="why-punchline">One engineer can run a team of AI workers.</p>
-  </section>
-
-  <!-- ===== 8. ARCHITECTURE ===== -->
+  <!-- ===== 4. UNDER THE HOOD ===== -->
   <section class="architecture">
-    <h2 class="section-title">How StrawPot Works</h2>
+    <h2 class="section-title">Under the hood</h2>
     <div class="arch-grid">
       <div class="arch-item">
-        <h3>StrawPot runtime</h3>
-        <p>The local runtime that orchestrates AI workers. Each role is a Markdown file with skills and dependencies.</p>
+        <h3>Roles as Markdown</h3>
+        <p>Each AI worker is a Markdown file with skills and dependencies. Easy to read, version, and share.</p>
       </div>
       <div class="arch-item">
-        <h3>StrawHub registry</h3>
-        <p>StrawHub is the registry for roles and skills&mdash;like npm for AI workers. Install community roles or publish your own.</p>
+        <h3>Local-first</h3>
+        <p>Everything runs on your machine. Your code never leaves your laptop.</p>
       </div>
       <div class="arch-item">
         <h3>Any agent runtime</h3>
         <p>Claude Code, Codex, Gemini, or your own. Assign different runtimes per role.</p>
       </div>
-      <div class="arch-item">
-        <h3>Local execution</h3>
-        <p>Everything runs on your machine. Your code never leaves your laptop.</p>
-      </div>
-      <div class="arch-item">
-        <h3>Memory &amp; context</h3>
-        <p>Agents share knowledge across sessions. Your AI company learns over time.</p>
-      </div>
-      <div class="arch-item">
-        <h3>Agent orchestration</h3>
-        <p>Automatic delegation, isolation, and merge strategies. You give the task; StrawPot runs the team.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 9. VISION ===== -->
-  <section class="vision">
-    <div class="vision-inner">
-      <h2 class="section-title">The next generation</h2>
-      <p class="vision-text">
-        Software engineers orchestrate machines.<br/>
-        The next generation will orchestrate AI workers.
-      </p>
-      <p class="vision-punchline">StrawPot is the operating system for that future.</p>
     </div>
   </section>
 
@@ -573,8 +324,8 @@ strawpot gui"
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 85vh;
-    padding: 6rem 1.5rem 2rem;
+    min-height: auto;
+    padding: 6rem 1.5rem 3rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -793,7 +544,155 @@ strawpot gui"
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(232, 185, 49, 0.08);
   }
 
-  /* ===== 2. PROBLEM STORY ===== */
+  /* ===== HERO DEMO (inline in hero) ===== */
+  .hero-demo {
+    max-width: 960px;
+    margin: 0 auto 2.5rem;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+  }
+
+  .hero-demo .demo-gif {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(232, 185, 49, 0.08);
+  }
+
+  /* ===== 2. PROOF SECTION ===== */
+  .proof {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .proof::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    text-align: left;
+  }
+
+  .proof-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: all 0.25s;
+  }
+
+  .proof-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232, 185, 49, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .proof-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+
+  .proof-meta {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--color-straw);
+    margin-bottom: 0.5rem;
+  }
+
+  .proof-desc {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* ===== 3. HOW STEPS ===== */
+  .how-steps {
+    padding: 6rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .how-steps::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    text-align: left;
+  }
+
+  .step-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: all 0.25s;
+  }
+
+  .step-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232, 185, 49, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-straw);
+    color: var(--color-bg-deep);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+
+  .step-card p {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* ===== 2. PROBLEM STORY (legacy) ===== */
   .problem {
     padding: 4rem 1.5rem;
     max-width: var(--max-width);
@@ -1653,6 +1552,14 @@ strawpot gui"
       padding: 7rem 1.5rem 4rem;
     }
 
+    .proof-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+
     .use-cases-grid {
       grid-template-columns: 1fr;
     }
@@ -1729,17 +1636,6 @@ strawpot gui"
       }
       btn.classList.add('copied');
       setTimeout(() => btn.classList.remove('copied'), 2000);
-    });
-  });
-
-  // See-it example tab switching
-  document.querySelectorAll('.see-it-tab').forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const example = (tab as HTMLElement).dataset.example;
-      document.querySelectorAll('.see-it-tab').forEach((t) => t.classList.remove('active'));
-      document.querySelectorAll('.see-it-example').forEach((e) => e.classList.add('hidden'));
-      tab.classList.add('active');
-      document.querySelector(`.see-it-example[data-example="${example}"]`)?.classList.remove('hidden');
     });
   });
 
