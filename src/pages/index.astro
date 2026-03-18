@@ -67,6 +67,14 @@ import Layout from '../layouts/Layout.astro';
     <p class="proof-caveat">AI output quality is still evolving. The orchestration infrastructure is robust.</p>
   </section>
 
+  <!-- ===== WHY THIS EXISTS ===== -->
+  <section class="why-exists">
+    <h2 class="section-title">Why this exists</h2>
+    <p class="why-text">Most AI agent systems stop at orchestration. They run prompts. They don't evolve behavior, share reusable roles, or build on each other.</p>
+    <p class="why-text">StrawPot makes AI workers composable, reusable, and evolvable. <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a> distributes what works. The system improves as roles are shared and refined.</p>
+    <p class="why-ambition">The infrastructure is ready. The next problem is how agent behaviors evolve and improve. That's what we're building toward.</p>
+  </section>
+
   <!-- ===== 3. HOW IT WORKS ===== -->
   <section id="how-it-works" class="how-steps">
     <h2 class="section-title">How it works</h2>
@@ -1717,6 +1725,45 @@ strawpot gui"
     .status-grid {
       grid-template-columns: 1fr;
     }
+  }
+
+  /* ===== WHY THIS EXISTS ===== */
+  .why-exists {
+    padding: 4rem 1.5rem;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .why-exists::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .why-text {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .why-text a {
+    color: var(--color-straw);
+  }
+
+  .why-ambition {
+    color: var(--color-text);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
   }
 </style>
 
