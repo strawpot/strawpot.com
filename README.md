@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/strawpot/strawpot.com/actions/workflows/deploy.yml"><img src="https://img.shields.io/github/actions/workflow/status/strawpot/strawpot.com/deploy.yml?branch=main&style=for-the-badge&label=Deploy" alt="Deploy"></a>
-  <a href="https://discord.gg/2BRsCRUrKb"><img src="https://img.shields.io/discord/1476285531464929505?label=Discord&logo=discord&logoColor=white&color=5865F2&style=for-the-badge" alt="Discord"></a>
+  <a href="https://discord.gg/6RMpzuKrRd"><img src="https://img.shields.io/discord/1476285531464929505?label=Discord&logo=discord&logoColor=white&color=5865F2&style=for-the-badge" alt="Discord"></a>
   <a href="https://github.com/strawpot/strawpot.com/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
 </p>
 
@@ -57,4 +57,4 @@ strawpot.com/
 
 - [strawpot](https://github.com/strawpot/strawpot) — the CLI
 - [StrawHub](https://strawhub.dev) — skill & role registry
-- [Discord](https://discord.gg/2BRsCRUrKb) — join the community
+- [Discord](https://discord.gg/6RMpzuKrRd) — join the community
