@@ -27,6 +27,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <h1 class="hero-title">Agents that decide how to solve tasks<br/>by composing other agents.</h1>
+      <p class="hero-contrast">Most AI agents follow predefined workflows. StrawPot lets agents figure out how to solve the task.</p>
       <p class="hero-tagline">
         Concurrent multi-agent execution with isolation, memory, and full traceability.
       </p>
@@ -466,6 +467,14 @@ strawpot gui"
     max-width: 620px;
     margin: 0 auto 1.5rem;
     line-height: 1.7;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+  }
+
+  .hero-contrast {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    font-weight: 500;
+    margin-bottom: 1rem;
     animation: fadeInUp 0.6s ease-out 0.2s both;
   }
 
