@@ -26,9 +26,9 @@ import Layout from '../layouts/Layout.astro';
         <img src="/demo.png" alt="StrawPot — one task, six AI agents, zero coordination" class="demo-gif" loading="eager" />
       </div>
 
-      <h1 class="hero-title">Role-based orchestration<br/>for AI workers.</h1>
+      <h1 class="hero-title">AI agents that form teams,<br/>delegate, and self-improve.</h1>
       <p class="hero-tagline">
-        Agents coordinate through roles, skills, and shared behaviors &mdash; running locally on your machine.
+        Hierarchies of agents coordinate locally. Roles define behavior. Skills compose automatically. StrawHub distributes what works.
       </p>
       <p class="hero-credibility">The infrastructure is ready. The behavior layer is still being explored.</p>
       <div class="hero-actions">
@@ -174,16 +174,28 @@ strawpot gui"
     <h2 class="section-title">Under the hood</h2>
     <div class="arch-grid">
       <div class="arch-item">
-        <h3>Roles as Markdown</h3>
-        <p>Each AI worker is a Markdown file with skills and dependencies. Easy to read, version, and share.</p>
+        <h3>Recursive delegation</h3>
+        <p>Agents spawn sub-agents concurrently with policy control, depth limits, and full call tree tracing.</p>
       </div>
       <div class="arch-item">
-        <h3>Local-first</h3>
-        <p>Everything runs on your machine. Your code never leaves your laptop.</p>
+        <h3>Git worktree isolation</h3>
+        <p>Every session gets its own branch. Concurrent sessions, crash recovery, configurable merge strategies.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Persistent memory</h3>
+        <p>Three-tier context cards that agents read and write across sessions. Pluggable providers.</p>
       </div>
       <div class="arch-item">
         <h3>Any agent runtime</h3>
-        <p>Claude Code, Codex, Gemini, or your own. Assign different runtimes per role.</p>
+        <p>Claude Code, Codex, Gemini, or your own. Two commands to add a new runtime. Mixed per role.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Roles as Markdown</h3>
+        <p>No Python, no orchestration code. Roles and skills are Markdown files you can read, version, and share.</p>
+      </div>
+      <div class="arch-item">
+        <h3>Structured tracing</h3>
+        <p>Every delegation, spawn, and memory access recorded to JSONL. Content-addressed artifacts. Full reconstruction.</p>
       </div>
     </div>
   </section>
