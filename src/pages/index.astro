@@ -67,6 +67,26 @@ import Layout from '../layouts/Layout.astro';
     <p class="proof-caveat">Structured artifacts land in your workspace. Outputs vary depending on model and task.</p>
   </section>
 
+  <!-- ===== WORKFLOWS ===== -->
+  <section class="workflows">
+    <h2 class="section-title">What you can do today</h2>
+    <div class="workflows-grid">
+      <div class="workflow-card">
+        <h3>Autonomous triage</h3>
+        <p class="workflow-desc">AI CEO reviews incoming issues, prioritizes based on project direction, and delegates approved ones to implementation-planner.</p>
+      </div>
+      <div class="workflow-card">
+        <h3>Ideation to delivery</h3>
+        <p class="workflow-desc">PM proposes a feature. CEO evaluates against direction. Implementer builds. Reviewer checks. One task, 5+ roles.</p>
+      </div>
+      <div class="workflow-card">
+        <h3>Self-improving roles</h3>
+        <p class="workflow-desc">role-creator defines a role, delegates to 6 evaluators in parallel, iterates until the role passes quality standards.</p>
+      </div>
+    </div>
+    <p class="workflows-caveat">Structure is consistent. Output quality depends on model and role definitions.</p>
+  </section>
+
   <!-- ===== WHY THIS EXISTS ===== -->
   <section class="why-exists">
     <h2 class="section-title">Why this exists</h2>
@@ -1731,6 +1751,92 @@ strawpot gui"
 
   @media (max-width: 600px) {
     .status-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ===== WORKFLOWS ===== */
+  .workflows {
+    padding: 4rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .workflows::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  .workflows-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .workflow-desc {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .workflow-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .workflow-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .workflow-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .workflow-card ul li {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    padding: 0.3rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .workflow-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-straw);
+  }
+
+  .workflows-caveat {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    margin-top: 1.5rem;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .workflows-grid {
       grid-template-columns: 1fr;
     }
   }
