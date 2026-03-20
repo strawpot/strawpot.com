@@ -21,17 +21,17 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-inner">
       <span class="hero-badge">Open Source &middot; Early Preview</span>
 
-      <!-- Demo first — the first thing visitors see -->
+      <!-- Demo first: the first thing visitors see -->
       <div class="hero-demo">
-        <img src="/demo.png" alt="StrawPot — one task, agents compose roles and execute" class="demo-gif" loading="eager" />
+        <img src="/demo.png" alt="StrawPot: one task, agents compose roles and execute" class="demo-gif" loading="eager" />
       </div>
 
-      <h1 class="hero-title">Agents that decide how to solve tasks.</h1>
-      <p class="hero-contrast">Most AI agents follow predefined workflows.<br/>StrawPot lets agents figure out how to solve the task.</p>
+      <h1 class="hero-title">One Engineer. One Laptop. One AI Company.</h1>
+      <p class="hero-contrast">Run an AI company locally: CEO, engineer, QA, and reviewer, all collaborating to ship your product.</p>
       <p class="hero-tagline">
-        Multi-agent orchestration is not the bottleneck anymore.
+        You direct the agents. They coordinate, delegate, and deliver. The human stays in the loop.
       </p>
-      <p class="hero-credibility">Outputs vary. Infrastructure does not.</p>
+      <p class="hero-credibility">Zero to AI team in 5 minutes. Outputs vary. Infrastructure does not.</p>
       <div class="hero-actions">
         <a href="#quickstart" class="btn btn-primary">Get Started</a>
         <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
@@ -47,7 +47,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ===== 2. PROOF — WHAT IT PRODUCES ===== -->
+  <!-- ===== 2. PROOF: WHAT IT PRODUCES ===== -->
   <section class="proof">
     <h2 class="section-title">How agents coordinate</h2>
     <p class="section-subtitle">&ldquo;Add dark mode to the app&rdquo;</p>
@@ -74,11 +74,11 @@ import Layout from '../layouts/Layout.astro';
     <div class="workflows-grid">
       <div class="workflow-card">
         <h3>Triage and plan GitHub issues</h3>
-        <p class="workflow-desc">Automatically triage and plan GitHub issues &mdash; prioritization, decomposition, delegation.</p>
+        <p class="workflow-desc">Automatically triage and plan GitHub issues: prioritization, decomposition, delegation.</p>
       </div>
       <div class="workflow-card">
         <h3>Turn an idea into a PR</h3>
-        <p class="workflow-desc">Automatically go from idea to shipped code &mdash; ideation, approval, implementation, and review.</p>
+        <p class="workflow-desc">Automatically go from idea to shipped code: ideation, approval, implementation, and review.</p>
       </div>
       <div class="workflow-card">
         <h3>Create and refine roles automatically</h3>
@@ -94,6 +94,14 @@ import Layout from '../layouts/Layout.astro';
     <p class="why-text">Most AI agent systems stop at orchestration. They run prompts. They don't evolve behavior, share reusable roles, or build on each other.</p>
     <p class="why-text">StrawPot makes AI workers composable, reusable, and evolvable. <a href="https://strawhub.dev" target="_blank" rel="noopener">StrawHub</a> distributes what works. The system improves as roles are shared and refined.</p>
     <p class="why-ambition">The infrastructure is ready. The next problem is how agent behaviors evolve and improve. That's what we're building toward.</p>
+  </section>
+
+  <!-- ===== HUMAN-DIRECTED ===== -->
+  <section class="human-directed">
+    <h2 class="section-title">Human-directed, not human-replaced</h2>
+    <p class="why-text">StrawPot agents are powerful, but they answer to you. You set the direction, define the roles, approve the plans, and stay in the loop.</p>
+    <p class="why-text">This is not about replacing engineers with AI. It is about giving one engineer the leverage of an entire team, while that engineer remains the decision-maker.</p>
+    <p class="why-ambition">Competitors race toward full autonomy. StrawPot takes the opposite position: the human is always the captain.</p>
   </section>
 
   <!-- ===== 3. HOW IT WORKS ===== -->
@@ -113,7 +121,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="step-card">
         <span class="step-number">3</span>
         <h3>Artifacts land</h3>
-        <p>Plan, code, tests, and content&mdash;in your local workspace.</p>
+        <p>Plan, code, tests, and content, all in your local workspace.</p>
       </div>
     </div>
   </section>
@@ -158,13 +166,31 @@ strawpot gui"
           <span class="resolution-tab">Output</span>
         </div>
         <div class="code-block">
-          <pre><code><span class="s">&#10003;</span> Launch plan generated
-<span class="s">&#10003;</span> X post drafted
-<span class="s">&#10003;</span> Engineering tasks created
-<span class="s">&#10003;</span> Code reviewed and approved
+          <pre><code><span class="s">&#10003;</span> Plan generated by ai-ceo
+<span class="s">&#10003;</span> Implementation delegated to implementer
+<span class="s">&#10003;</span> Code written in isolated worktree
+<span class="s">&#10003;</span> Review completed by code-reviewer
 <span class="s">&#10003;</span> Tests passing
 
-<span class="s">&#10003; Done — 5 artifacts in ./output</span></code></pre>
+<span class="s">&#10003; Done: 4 artifacts in ./output</span></code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="cli-output">
+      <div class="code-window">
+        <div class="code-tabs">
+          <div class="window-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="resolution-tab">StrawHub</span>
+        </div>
+        <div class="code-block">
+          <pre><code><span class="c"># Install from the community</span>
+<span class="p">$</span> strawhub install role code-reviewer
+
+<span class="c"># Publish what you've built</span>
+<span class="p">$</span> strawhub publish skill my-custom-skill</code></pre>
         </div>
       </div>
     </div>
@@ -241,7 +267,7 @@ strawpot gui"
       <a href="https://strawhub.dev" class="hero-link hero-link--strawhub" target="_blank" rel="noopener">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <span class="hero-link-label">StrawHub</span>
-        <span class="hero-link-sub">Browse roles &amp; skills</span>
+        <span class="hero-link-sub">Install &amp; publish roles, skills, and more</span>
       </a>
       <a href="https://discord.gg/6RMpzuKrRd" class="hero-link hero-link--discord" target="_blank" rel="noopener">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
@@ -282,7 +308,7 @@ strawpot gui"
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-subscribe">
-      <p class="footer-subscribe-label">Get updates &mdash; no spam.</p>
+      <p class="footer-subscribe-label">Get updates. No spam.</p>
       <form
         class="subscribe-form"
         id="subscribe-form"
@@ -315,7 +341,7 @@ strawpot gui"
       <span class="footer-sep" aria-hidden="true">&middot;</span>
       <a href="https://github.com/strawpot/strawpot/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
     </nav>
-    <p class="footer-brand">Open system for role-based AI agents.</p>
+    <p class="footer-brand">One engineer. One laptop. One AI company.</p>
     <p class="footer-credit">Built by the StrawPot contributors.</p>
   </footer>
 </Layout>
@@ -1872,6 +1898,27 @@ strawpot gui"
   }
 
   .why-exists::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+  }
+
+  /* ===== HUMAN-DIRECTED ===== */
+  .human-directed {
+    padding: 4rem 1.5rem;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .human-directed::after {
     content: '';
     position: absolute;
     bottom: 0;

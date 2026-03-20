@@ -6,13 +6,13 @@
   <a href="https://github.com/strawpot/strawpot.com/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
 </p>
 
-Landing page for [StrawPot](https://github.com/strawpot/strawpot) — an open-source CLI for AI agent orchestration.
+Landing page for [StrawPot](https://github.com/strawpot/strawpot), an open-source framework for multi-agent orchestration.
 
 **Live at [strawpot.com](https://strawpot.com)**
 
 ## Tech Stack
 
-- [Astro](https://astro.build) — static site generator
+- [Astro](https://astro.build): static site generator
 - Custom CSS with CSS custom properties (no framework)
 - [Clash Display](https://www.fontshare.com/fonts/clash-display) + [Satoshi](https://www.fontshare.com/fonts/satoshi) fonts
 - Deployed to GitHub Pages via GitHub Actions
@@ -55,6 +55,6 @@ strawpot.com/
 
 ## Related
 
-- [strawpot](https://github.com/strawpot/strawpot) — the CLI
-- [StrawHub](https://strawhub.dev) — skill & role registry
-- [Discord](https://discord.gg/6RMpzuKrRd) — join the community
+- [strawpot](https://github.com/strawpot/strawpot): the multi-agent orchestration framework
+- [StrawHub](https://strawhub.dev): skill and role registry
+- [Discord](https://discord.gg/6RMpzuKrRd): join the community
