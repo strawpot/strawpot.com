@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import BlogNav from '../../components/BlogNav.astro';
 import { getCollection, render } from 'astro:content';
+import { formatDate } from '../../utils/format';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -13,20 +15,8 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
-
-function estimateReadingTime(body: string): number {
-  const words = body.trim().split(/\s+/).length;
-  return Math.max(1, Math.ceil(words / 250));
-}
-
-const readingTime = estimateReadingTime(post.body ?? '');
+const words = (post.body ?? '').trim().split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(words / 250));
 ---
 
 <Layout
@@ -37,16 +27,7 @@ const readingTime = estimateReadingTime(post.body ?? '');
   publishedDate={post.data.date}
   author={post.data.author}
 >
-  <nav class="top-nav">
-    <div class="top-nav-inner">
-      <a href="/" class="nav-brand">StrawPot</a>
-      <div class="nav-links">
-        <a href="/blog" class="nav-link nav-link--active">Blog</a>
-        <a href="https://docs.strawpot.com/" class="nav-link" target="_blank" rel="noopener">Docs</a>
-        <a href="https://github.com/strawpot/strawpot" class="nav-link" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-  </nav>
+  <BlogNav />
 
   <main class="blog-post">
     <article class="post-article">
@@ -74,57 +55,6 @@ const readingTime = estimateReadingTime(post.body ?? '');
 </Layout>
 
 <style>
-  .top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    padding: 1rem 1.5rem;
-    background: rgba(10, 10, 15, 0.9);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .top-nav-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-brand {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--color-text);
-  }
-
-  .nav-brand:hover {
-    color: var(--color-straw);
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--color-text-muted);
-  }
-
-  .nav-link:hover {
-    color: var(--color-text);
-  }
-
-  .nav-link--active {
-    color: var(--color-straw);
-  }
-
   .blog-post {
     padding: 8rem 1.5rem 4rem;
   }
@@ -242,14 +172,7 @@ const readingTime = estimateReadingTime(post.body ?? '');
     border: 1px solid var(--color-border);
   }
 
-  .post-content :global(img) {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 1.5rem 0;
-    border: 1px solid var(--color-border);
-  }
-
+  .post-content :global(img),
   .post-content :global(video) {
     max-width: 100%;
     height: auto;

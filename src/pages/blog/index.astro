@@ -1,33 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import BlogNav from '../../components/BlogNav.astro';
 import { getCollection } from 'astro:content';
+import { formatDate } from '../../utils/format';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
 ---
 
 <Layout
   title="Blog — StrawPot"
   description="Stories from building an AI company with AI agents. What shipped, what broke, and what surprised us."
 >
-  <nav class="top-nav">
-    <div class="top-nav-inner">
-      <a href="/" class="nav-brand">StrawPot</a>
-      <div class="nav-links">
-        <a href="/blog" class="nav-link nav-link--active">Blog</a>
-        <a href="https://docs.strawpot.com/" class="nav-link" target="_blank" rel="noopener">Docs</a>
-        <a href="https://github.com/strawpot/strawpot" class="nav-link" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-  </nav>
+  <BlogNav />
 
   <main class="blog-listing">
     <div class="blog-listing-inner">
@@ -55,57 +40,6 @@ function formatDate(date: Date): string {
 </Layout>
 
 <style>
-  .top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    padding: 1rem 1.5rem;
-    background: rgba(10, 10, 15, 0.9);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .top-nav-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-brand {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--color-text);
-  }
-
-  .nav-brand:hover {
-    color: var(--color-straw);
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--color-text-muted);
-  }
-
-  .nav-link:hover {
-    color: var(--color-text);
-  }
-
-  .nav-link--active {
-    color: var(--color-straw);
-  }
-
   .blog-listing {
     padding: 8rem 1.5rem 4rem;
   }
