@@ -23,7 +23,14 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Demo first: the first thing visitors see -->
       <div class="hero-demo">
-        <img src="/demo.png" alt="StrawPot: one task, agents compose roles and execute" class="demo-gif" loading="eager" />
+        <div class="demo-tabs" role="tablist" aria-label="Demo video selector">
+          <button class="demo-tab demo-tab--active" data-demo="cli" role="tab" aria-selected="true" aria-controls="demo-video-cli">CLI</button>
+          <button class="demo-tab" data-demo="gui" role="tab" aria-selected="false" aria-controls="demo-video-gui">GUI</button>
+        </div>
+        <div class="demo-video-wrap">
+          <video src="/demo.mp4" class="demo-video" autoplay muted loop playsinline id="demo-video-cli" role="tabpanel" aria-label="StrawPot CLI demo"></video>
+          <video src="/demo-gui.mp4" class="demo-video demo-video--hidden" muted loop playsinline id="demo-video-gui" role="tabpanel" aria-label="StrawPot GUI demo"></video>
+        </div>
       </div>
 
       <h1 class="hero-title">One Engineer. One Laptop. One AI Company.</h1>
@@ -661,11 +668,53 @@ strawpot gui"
     animation: fadeInUp 0.6s ease-out 0.1s both;
   }
 
-  .hero-demo .demo-gif {
-    width: 100%;
+  .demo-tabs {
+    display: flex;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
+    padding-left: 12px;
+  }
+
+  .demo-tab {
+    padding: 0.5rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+  }
+
+  .demo-tab:hover {
+    color: var(--color-text);
+  }
+
+  .demo-tab--active {
+    color: var(--color-straw);
+    background: var(--color-bg-elevated);
+    border-color: var(--color-border);
+  }
+
+  .demo-video-wrap {
     border-radius: 12px;
     border: 1px solid var(--color-border);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(232, 185, 49, 0.08);
+    overflow: hidden;
+    background: var(--color-bg-deep);
+  }
+
+  .demo-video {
+    width: 100%;
+    display: block;
+  }
+
+  .demo-video--hidden {
+    display: none;
   }
 
   /* ===== 2. PROOF SECTION ===== */
@@ -1960,6 +2009,31 @@ strawpot gui"
       }
     })
     .catch(() => {});
+
+  // Demo video tab switching
+  const demoTabs = document.querySelectorAll('.demo-tab');
+  const demoVideos = document.querySelectorAll('.demo-video');
+
+  demoTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = (tab as HTMLElement).dataset.demo;
+      demoTabs.forEach(t => {
+        t.classList.remove('demo-tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('demo-tab--active');
+      tab.setAttribute('aria-selected', 'true');
+      demoVideos.forEach(v => {
+        v.classList.add('demo-video--hidden');
+        (v as HTMLVideoElement).pause();
+      });
+      const video = document.getElementById(`demo-video-${target}`) as HTMLVideoElement;
+      if (video) {
+        video.classList.remove('demo-video--hidden');
+        video.play();
+      }
+    });
+  });
 
   // Nav scroll effect
   const nav = document.querySelector('.top-nav');
