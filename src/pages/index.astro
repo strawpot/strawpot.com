@@ -670,7 +670,6 @@ strawpot gui"
 
   .demo-tabs {
     display: flex;
-    gap: 0;
     margin-bottom: -1px;
     position: relative;
     z-index: 1;
@@ -2012,12 +2011,15 @@ strawpot gui"
     .catch(() => {});
 
   // Demo video tab switching
-  document.querySelectorAll('.demo-tab').forEach((tab) => {
+  const demoTabs = document.querySelectorAll('.demo-tab');
+  const demoVideos = document.querySelectorAll('.demo-video');
+
+  demoTabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       const target = (tab as HTMLElement).dataset.demo;
-      document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('demo-tab--active'));
+      demoTabs.forEach(t => t.classList.remove('demo-tab--active'));
       tab.classList.add('demo-tab--active');
-      document.querySelectorAll('.demo-video').forEach(v => v.classList.add('demo-video--hidden'));
+      demoVideos.forEach(v => v.classList.add('demo-video--hidden'));
       const video = document.getElementById(`demo-video-${target}`) as HTMLVideoElement;
       if (video) {
         video.classList.remove('demo-video--hidden');
