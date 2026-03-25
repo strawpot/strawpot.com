@@ -63,7 +63,6 @@ output:
   fps: 30
   transition: crossfade
   transition_duration: 0.5s
-  background_music: null
   codec: libx264
   crf: 23
   pixel_format: yuv420p
