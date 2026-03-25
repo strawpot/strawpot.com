@@ -1,17 +1,18 @@
 # StrawPot CLI Demo Video Script
 # Produced with the demo-video-creator skill
-# Final output: public/demo.mp4 (~53s, 1920x1080, 30fps, h264)
+# Final output: public/demo.mp4 (~54s, 1920x1080, 25fps, h264)
 #
 # Recording method:
 #   - Title cards: Pillow (PNG) -> ffmpeg (MP4, 5s loop)
-#   - Terminal scene: VHS (Catppuccin Mocha theme) replaying real session output
-#   - Stitched with ffmpeg xfade crossfade transitions (0.5s)
+#   - Terminal scene: VHS (Catppuccin Mocha theme) running a mock strawpot binary
+#     that outputs colored text via echo -e (avoids broken Hide/Show + printf approach)
+#   - Mock binary: .demo-video-work/bin/strawpot
+#   - VHS tape: .demo-video-work/scene-002.tape
+#   - Stitched with ffmpeg xfade fade transitions (0.5s)
 #
-# Real session captured on 2026-03-25:
-#   strawpot start --task "Add a meta description tag to the homepage head section for better SEO"
-#   Result: ai-ceo delegated to implementer (1m 56s), session complete in 2m 33s, 1 file changed.
-#   The demo shows the two-delegation flow (implementer + code-reviewer) that matches
-#   the website's output block for a typical session.
+# Demo flow: ai-ceo analyzes task -> delegates to implementer (creates branch,
+# writes code, runs tests, creates PR) -> delegates to code-reviewer (reviews,
+# approves) -> session complete. Two-agent delegation matching the website copy.
 
 scenes:
   # Scene 1: Opening title card (5s)
@@ -24,11 +25,12 @@ scenes:
     font_size: 80
     subtitle_font_size: 32
 
-  # Scene 2: CLI session — user gives task, agents collaborate (~44s)
+  # Scene 2: CLI session — user gives task, agents collaborate (~45s)
   # Shows: typing `strawpot start --task`, ai-ceo planning & delegating,
-  # implementer completing work, code-reviewer approving, session complete.
-  # Recorded with VHS using Hide/Show technique to replay real output
-  # with controlled timing (see .demo-video-work/scene-002.tape).
+  # implementer creating branch/writing code/testing/PR, code-reviewer
+  # reviewing & approving, session complete with timing summary.
+  # Recorded with VHS using a mock binary for reliable color rendering
+  # (see .demo-video-work/scene-002.tape and .demo-video-work/bin/strawpot).
   - type: terminal
     commands:
       - "strawpot start --task 'Add a meta description tag for SEO'"
@@ -53,7 +55,7 @@ scenes:
 output:
   file: public/demo.mp4
   resolution: 1920x1080
-  fps: 30
+  fps: 25
   transition: crossfade
   transition_duration: 0.5s
   codec: libx264
