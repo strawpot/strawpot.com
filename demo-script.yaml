@@ -1,0 +1,68 @@
+# StrawPot 60-second Demo Video Script
+# Produced with the demo-video-creator skill
+# Final output: public/demo.mp4 (52s, 1920x1080, 30fps, h264)
+
+scenes:
+  # Scene 1: Opening title card (5s)
+  - type: title-card
+    text: "StrawPot"
+    subtitle: "One Engineer. One Laptop. One AI Company."
+    duration: 5s
+    background: "#0f0f23"
+    text_color: "#ffffff"
+    font_size: 80
+    subtitle_font_size: 32
+
+  # Scene 2: User gives task, agents collaborate (28.7s)
+  # Shows: typing the command, ai-ceo planning & delegating,
+  # implementer writing code, reviewer approving, PR created
+  - type: terminal
+    commands:
+      - "strawpot start --task 'Add dark mode toggle to the settings page'"
+    typing_speed: 30ms
+    wait_after: 30s
+    viewport: 1920x1080
+    font_size: 22
+    theme: "Catppuccin Mocha"
+
+  # Scene 3: Mid title card (4s)
+  - type: title-card
+    text: "Your AI team."
+    subtitle: "Your codebase. Your rules."
+    duration: 4s
+    background: "#0f0f23"
+    text_color: "#ffffff"
+    font_size: 72
+    subtitle_font_size: 36
+
+  # Scene 4: Show the shipped result (11.6s)
+  - type: terminal
+    commands:
+      - "git log --oneline -5"
+      - "git diff --stat HEAD~1"
+      - "gh pr list --limit 1"
+    typing_speed: 40ms
+    wait_after: 3s
+    viewport: 1920x1080
+    font_size: 22
+    theme: "Catppuccin Mocha"
+
+  # Scene 5: Closing CTA (5s)
+  - type: title-card
+    text: "Ship faster with AI agents"
+    subtitle: "Try it: strawpot.com"
+    duration: 5s
+    background: "#0f0f23"
+    text_color: "#ffffff"
+    font_size: 72
+    subtitle_font_size: 36
+
+output:
+  file: demo.mp4
+  resolution: 1920x1080
+  fps: 30
+  transition: crossfade
+  transition_duration: 0.5s
+  codec: libx264
+  crf: 23
+  pixel_format: yuv420p
