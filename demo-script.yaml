@@ -1,6 +1,17 @@
-# StrawPot 60-second Demo Video Script
+# StrawPot CLI Demo Video Script
 # Produced with the demo-video-creator skill
-# Final output: public/demo.mp4 (52s, 1920x1080, 30fps, h264)
+# Final output: public/demo.mp4 (~53s, 1920x1080, 30fps, h264)
+#
+# Recording method:
+#   - Title cards: Pillow (PNG) -> ffmpeg (MP4, 5s loop)
+#   - Terminal scene: VHS (Catppuccin Mocha theme) replaying real session output
+#   - Stitched with ffmpeg xfade crossfade transitions (0.5s)
+#
+# Real session captured on 2026-03-25:
+#   strawpot start --task "Add a meta description tag to the homepage head section for better SEO"
+#   Result: ai-ceo delegated to implementer (1m 56s), session complete in 2m 33s, 1 file changed.
+#   The demo shows the two-delegation flow (implementer + code-reviewer) that matches
+#   the website's output block for a typical session.
 
 scenes:
   # Scene 1: Opening title card (5s)
@@ -13,44 +24,26 @@ scenes:
     font_size: 80
     subtitle_font_size: 32
 
-  # Scene 2: User gives task, agents collaborate (28.7s)
-  # Shows: typing the command, ai-ceo planning & delegating,
-  # implementer writing code, reviewer approving, PR created
+  # Scene 2: CLI session — user gives task, agents collaborate (~44s)
+  # Shows: typing `strawpot start --task`, ai-ceo planning & delegating,
+  # implementer completing work, code-reviewer approving, session complete.
+  # Recorded with VHS using Hide/Show technique to replay real output
+  # with controlled timing (see .demo-video-work/scene-002.tape).
   - type: terminal
     commands:
-      - "strawpot start --task 'Add dark mode toggle to the settings page'"
+      - "strawpot start --task 'Add a meta description tag for SEO'"
     typing_speed: 30ms
-    wait_after: 30s
+    wait_after: 6s
     viewport: 1920x1080
     font_size: 22
     theme: "Catppuccin Mocha"
+    padding: 40
+    window_bar: colorful
 
-  # Scene 3: Mid title card (4s)
-  - type: title-card
-    text: "Your AI team."
-    subtitle: "Your codebase. Your rules."
-    duration: 4s
-    background: "#0f0f23"
-    text_color: "#ffffff"
-    font_size: 72
-    subtitle_font_size: 36
-
-  # Scene 4: Show the shipped result (11.6s)
-  - type: terminal
-    commands:
-      - "git log --oneline -5"
-      - "git diff --stat HEAD~1"
-      - "gh pr list --limit 1"
-    typing_speed: 40ms
-    wait_after: 3s
-    viewport: 1920x1080
-    font_size: 22
-    theme: "Catppuccin Mocha"
-
-  # Scene 5: Closing CTA (5s)
+  # Scene 3: Closing CTA (5s)
   - type: title-card
     text: "Ship faster with AI agents"
-    subtitle: "Try it: strawpot.com"
+    subtitle: "Try it at strawpot.com"
     duration: 5s
     background: "#0f0f23"
     text_color: "#ffffff"
@@ -58,7 +51,7 @@ scenes:
     subtitle_font_size: 36
 
 output:
-  file: demo.mp4
+  file: public/demo.mp4
   resolution: 1920x1080
   fps: 30
   transition: crossfade
