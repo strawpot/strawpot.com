@@ -1,64 +1,64 @@
-# StrawPot 60-second Demo Video Script
-# Produced with the demo-video-creator skill
-# Final output: public/demo.mp4 (52s, 1920x1080, 30fps, h264)
+# StrawPot CLI Demo Video Script — AUTHENTIC
+# Final output: public/demo.mp4 (~23s, 1920x1080, 30fps, h264)
+#
+# Every line of terminal output matches the real TerminalProgressRenderer
+# (cli/src/strawpot/progress.py) running in TTY mode. No fabricated
+# sub-agent activity, no fake streaming, no invented delegations.
+#
+# Recording method:
+#   - Title cards: Pillow (PNG) -> ffmpeg (MP4, 3s loop)
+#   - Terminal scene: VHS (Catppuccin Mocha) running an authentic mock
+#     that replays EXACT TerminalProgressRenderer output + real Session
+#     Recap format from the orchestrator agent.
+#   - Mock binary: .demo-video-work/bin/strawpot
+#   - VHS tape: .demo-video-work/scene-002.tape
+#   - Stitched with ffmpeg xfade fade transitions (0.5s)
+#
+# Real CLI flow:
+#   Session started (orchestrator: ai-ceo)
+#   > Delegating to implementer...
+#   checkmark implementer completed (1m 56s)
+#   [orchestrator Session Recap output]
+#   checkmark Session complete (2m 33s) - 1 file changed
 
 scenes:
-  # Scene 1: Opening title card (5s)
+  # Scene 1: Opening title card (3s)
   - type: title-card
     text: "StrawPot"
-    subtitle: "One Engineer. One Laptop. One AI Company."
-    duration: 5s
-    background: "#0f0f23"
-    text_color: "#ffffff"
-    font_size: 80
-    subtitle_font_size: 32
-
-  # Scene 2: User gives task, agents collaborate (28.7s)
-  # Shows: typing the command, ai-ceo planning & delegating,
-  # implementer writing code, reviewer approving, PR created
-  - type: terminal
-    commands:
-      - "strawpot start --task 'Add dark mode toggle to the settings page'"
-    typing_speed: 30ms
-    wait_after: 30s
-    viewport: 1920x1080
-    font_size: 22
-    theme: "Catppuccin Mocha"
-
-  # Scene 3: Mid title card (4s)
-  - type: title-card
-    text: "Your AI team."
-    subtitle: "Your codebase. Your rules."
-    duration: 4s
+    subtitle: "One task. Agents figure out the rest."
+    duration: 3s
     background: "#0f0f23"
     text_color: "#ffffff"
     font_size: 72
-    subtitle_font_size: 36
+    subtitle_font_size: 32
 
-  # Scene 4: Show the shipped result (11.6s)
+  # Scene 2: Authentic CLI session (~18s)
+  # Shows real progress renderer output: session start, delegation,
+  # completion with timing, Session Recap summary (changes table,
+  # test results, PR), and session end.
   - type: terminal
     commands:
-      - "git log --oneline -5"
-      - "git diff --stat HEAD~1"
-      - "gh pr list --limit 1"
-    typing_speed: 40ms
+      - 'strawpot start --task "Add a meta description tag for SEO"'
+    typing_speed: 30ms
     wait_after: 3s
     viewport: 1920x1080
     font_size: 22
     theme: "Catppuccin Mocha"
+    padding: 40
+    window_bar: colorful
 
-  # Scene 5: Closing CTA (5s)
+  # Scene 3: Closing CTA (3s)
   - type: title-card
-    text: "Ship faster with AI agents"
-    subtitle: "Try it: strawpot.com"
-    duration: 5s
+    text: "strawpot.com"
+    subtitle: "pip install strawpot"
+    duration: 3s
     background: "#0f0f23"
     text_color: "#ffffff"
     font_size: 72
-    subtitle_font_size: 36
+    subtitle_font_size: 32
 
 output:
-  file: demo.mp4
+  file: public/demo.mp4
   resolution: 1920x1080
   fps: 30
   transition: crossfade
